@@ -298,8 +298,9 @@ $(document).ready(function(){
             $calcForm.resetForm();
             var arModel = arCars[$('.b-select-mark').val()][$(this).val()];
             for (engine in arModel) {
-                if(engine){
-                    $('.b-select-engine').append('<option value="' + engine + '">' + arModel[engine].name + '</option>');
+                if(engine && arModel[engine] && arModel[engine].powerBefore && arModel[engine].powerAfter){
+                    $('.b-select-engine').append('<option value="' + engine + '">' + 
+                        arModel[engine].name + ' (' + arModel[engine].powerBefore + ' л.с.)' + '</option>');
                 }
             }
         }
