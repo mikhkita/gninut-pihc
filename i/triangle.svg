@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="25px" viewBox="0 0 20 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Rectangle 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFD500" offset="0%"></stop>
+            <stop stop-color="#DB9B00" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A4" transform="translate(-371.000000, -526.000000)" fill="url(#linearGradient-1)">
+            <g id="Первый-экран">
+                <g id="Group-2" transform="translate(370.000000, 41.000000)">
+                    <g id="Group-5" transform="translate(0.000000, 230.000000)">
+                        <g id="Group-25" transform="translate(1.000000, 255.000000)">
+                            <polygon id="Rectangle-13" transform="translate(10.000000, 12.459961) rotate(90.000000) translate(-10.000000, -12.459961) " points="10 3.22851563 22 21.6914062 -2 21.6914062"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

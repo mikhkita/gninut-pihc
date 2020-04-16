@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A4" transform="translate(-1170.000000, -6196.000000)" fill="#282828" fill-rule="nonzero">
+            <g id="Group-34" transform="translate(307.000000, 5555.000000)">
+                <g id="Group-31" transform="translate(793.000000, 0.000000)">
+                    <g id="Group-33" transform="translate(66.000000, 636.000000)">
+                        <g id="check-(1)-2" transform="translate(4.000000, 5.000000)">
+                            <g id="check-(1)">
+                                <path d="M4.92271634,9.80252403 C4.8,9.92596154 4.63257212,9.99483172 4.45865385,9.99483172 C4.28473557,9.99483172 4.11730769,9.92596154 3.99459135,9.80252403 L0.288461538,6.09579326 C-0.0961538462,5.71117788 -0.0961538462,5.0875 0.288461538,4.70360578 L0.752524031,4.23942308 C1.13725963,3.85480769 1.76021634,3.85480769 2.14483172,4.23942308 L4.45865385,6.55336538 L10.7109375,0.300961538 C11.0956731,-0.0836538462 11.7192308,-0.0836538462 12.1032452,0.300961538 L12.5673077,0.765144246 C12.9519231,1.14975963 12.9519231,1.77331729 12.5673077,2.15733172 L4.92271634,9.80252403 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
