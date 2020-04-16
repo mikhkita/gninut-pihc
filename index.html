@@ -193,48 +193,28 @@
 				<div class="b-5-top-right"></div>
 			</div>
 			<div class="b-5-bottom">
-				<form action="kitsend.php" method="POST">
+				<form class="b-form-calc-power" action="kitsend.php" method="POST">
 					<div class="b-input">
-						<select name="mark" required>
-							<option value="Выберите марку" selected disabled>Выберите марку</option>
-							<option value="Toyota">Toyota</option>
-							<option value="BMW">BMW</option>
-							<option value="Mercedes">Mercedes</option>
-							<option value="Cadillac">Cadillac</option>
-							<option value="Opel">Opel</option>
-							<option value="Mazda">Mazda</option>
-							<option value="Honda">Honda</option>
-							<option value="Nissan">Nissan</option>
+						<select class="b-select-mark" name="mark" required>
+							<option value="" class="default-option">Выберите марку</option>
 						</select>
 						<label for="mark">Пожалуйста, укажите марку автомобиля</label>
 					</div>
 					<div class="b-input">
-						<select name="model" required>
-							<option value="Выберите модель" selected disabled>Выберите модель</option>
-							<option value="1-series">1-series</option>
-							<option value="3-series">3-series</option>
-							<option value="5-series">5-series</option>
-							<option value="7-series">7-series</option>
-							<option value="X5">X5</option>
-							<option value="X6">X6</option>
+						<select class="b-select-model" name="model" required>
+							<option value="" class="default-option">Выберите модель</option>
 						</select>
 						<label for="mark">Пожалуйста, укажите модель автомобиля</label>
 					</div>
 					<div class="b-input">
-						<select name="engine" required>
-							<option value="Выберите двигатель" selected disabled>Выберите двигатель</option>
-							<option value="1.8">1.8</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="4.7">4.7</option>
-							<option value="6.3">6.3</option>
+						<select class="b-select-engine" name="engine" required>
+							<option value="" class="default-option">Выберите двигатель</option>
 						</select>
 						<label for="engine">Пожалуйста, укажите двигатель</label>
 					</div>
 					<div class="b-input">
 						<div class="b-btn-cont">
-							<a href="#" class="b-btn ajax">
+							<a href="#" class="b-btn b-btn-calc-power">
 								<span>Узнать реальную мощность</span>
 							</a>
 						</div>

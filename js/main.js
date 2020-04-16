@@ -261,4 +261,56 @@ $(document).ready(function(){
         });
     }
 
+    // ===========
+
+    var arCars = {};
+    $.ajax({
+        type: "GET",
+        url: "/storage/cars.json",
+        success: function(res){
+            arCars = res;
+            for (mark in arCars) {
+                if(mark){
+                    $('.b-select-mark').append('<option value="' + mark + '">' + mark + '</option>');
+                }
+            }
+            //console.log(arCars);
+        },
+    });
+
+    var $calcForm = $('.b-form-calc-power').validate({errorElement : "span"});
+
+    $(document).on('change', '.b-select-mark', function(){
+        $(".b-select-model option:not(.default-option), .b-select-engine option:not(.default-option)").remove();
+        if($(this).val()){
+            $calcForm.resetForm();
+            for (model in arCars[$(this).val()]) {
+                if(model){
+                    $('.b-select-model').append('<option value="' + model + '">' + model + '</option>');
+                }
+            }
+        }
+    });
+
+    $(document).on('change', '.b-select-model', function(){
+        $(".b-select-engine option:not(.default-option)").remove();
+        if($(this).val() && $('.b-select-mark').val()){
+            $calcForm.resetForm();
+            var arModel = arCars[$('.b-select-mark').val()][$(this).val()];
+            for (engine in arModel) {
+                if(engine){
+                    $('.b-select-engine').append('<option value="' + engine + '">' + arModel[engine].name + '</option>');
+                }
+            }
+        }
+    });
+
+    $(document).on('click', '.b-btn-calc-power', function(){
+        if($calcForm.form()){
+            alert(arCars[$('.b-select-mark').val()][$('.b-select-model').val()][$('.b-select-engine').val()].powerAfter);
+        }
+        
+        return false;
+    });
+
 });
