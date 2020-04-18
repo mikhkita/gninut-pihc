@@ -3,9 +3,9 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<title></title>
+	<title>Автобезопасность | Чип-тюнинг</title>
 	<meta name="keywords" content=''>
 	<meta name="description" content=''>
 
@@ -22,14 +22,31 @@
 	<!-- <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css"> -->
 	<!-- <link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css"> -->
 
-	<!-- <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico"> -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 	<div class="b b-1">
 		<div class="b-block">
 			<div class="b-info clearfix">
 				<div class="b-info-left">
-					<a href="#" class="b-logo"></a>
+					<a href="/" class="b-logo"></a>
 					<div class="b-addr">
 						<span>г. Томск, ул. Смирнова, д. 7/4 </span>
 						<a href="#" class="dashed yellow b-go" data-block=".b-9">посмотреть на карте</a>
@@ -79,7 +96,7 @@
 				</div>
 				<div class="b-2-item">
 					<div class="b-2-item-img" style="background-image: url('i/b-2-4.svg');"></div>
-					<div class="b-2-item-text">Снижение расхода топлива до 2 л. на 100 км.</div>
+					<div class="b-2-item-text">Снижение расхода топлива до 2&nbsp;л. на 100&nbsp;км.</div>
 				</div>
 			</div>
 		</div>
@@ -222,19 +239,19 @@
 			<div class="b-5-bottom">
 				<form class="b-form-calc-power" action="" method="">
 					<div class="b-input">
-						<select class="b-select-mark" name="mark" required>
+						<select class="b-select-mark" id="mark" name="mark" required>
 							<option value="" class="default-option">Выберите марку</option>
 						</select>
 						<label for="mark">Пожалуйста, укажите марку автомобиля</label>
 					</div>
 					<div class="b-input">
-						<select class="b-select-model" name="model" required>
+						<select class="b-select-model" id="model" name="model" required>
 							<option value="" class="default-option">Выберите модель</option>
 						</select>
 						<label for="mark">Пожалуйста, укажите модель автомобиля</label>
 					</div>
 					<div class="b-input">
-						<select class="b-select-engine" name="engine" required>
+						<select class="b-select-engine" id="engine" name="engine" required>
 							<option value="" class="default-option">Выберите двигатель</option>
 						</select>
 						<label for="engine">Пожалуйста, укажите двигатель</label>
@@ -258,26 +275,26 @@
 			<div class="b-tab-block">
 				<h2>Для того, чтобы достичь таких результатов, <b>мы предлагаем следующие услуги</b></h2>
 				<div class="b-tab-list">
-					<div class="b-tab-item active" id="1">
+					<div class="b-tab-item active" id="10">
 						<div class="b-tab-item-small">Услуга №1</div>
 						<div class="b-tab-item-big"><span>Чип-тюнинг <br>двигателя&nbsp;и&nbsp;АКПП</span></div>
 					</div>
-					<div class="b-tab-item" id="2">
+					<div class="b-tab-item" id="20">
 						<div class="b-tab-item-small">Услуга №2</div>
 						<div class="b-tab-item-big"><span>Удаление катализатора</span></div>
 					</div>
-					<div class="b-tab-item" id="3">
+					<div class="b-tab-item" id="30">
 						<div class="b-tab-item-small">Услуга №3</div>
 						<div class="b-tab-item-big"><span>Отключение <br>клапана&nbsp;ЕГР</span></div>
 					</div>
-					<div class="b-tab-item" id="4">
+					<div class="b-tab-item" id="40">
 						<div class="b-tab-item-small">Услуга №4</div>
 						<div class="b-tab-item-big"><span>Отключение <br>сажевого&nbsp;фильтра</span></div>
 					</div>
 				</div>
 				<div class="b-tab-slider-cont">
 					<div class="b-tab-slider-list">
-						<div class="b-tab-slider" data-id="1">
+						<div class="b-tab-slider" data-id="10">
 							<div class="b-tab-slider-inner">
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
@@ -289,7 +306,7 @@
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-2.jpg');"></div>
 							</div>
 						</div>
-						<div class="b-tab-slider" data-id="2">
+						<div class="b-tab-slider" data-id="20">
 							<div class="b-tab-slider-inner">
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
@@ -301,7 +318,7 @@
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-2.jpg');"></div>
 							</div>
 						</div>
-						<div class="b-tab-slider" data-id="3">
+						<div class="b-tab-slider" data-id="30">
 							<div class="b-tab-slider-inner">
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
@@ -313,7 +330,7 @@
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-2.jpg');"></div>
 							</div>
 						</div>
-						<div class="b-tab-slider" data-id="4">
+						<div class="b-tab-slider" data-id="40">
 							<div class="b-tab-slider-inner">
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
@@ -333,7 +350,7 @@
 	<div class="b b-7">
 		<div class="b-block">
 			<div class="b-7-left">
-				<h2>Попробуйте чип-тюнинг на ваш <span class="current-car">Cadillac </span><br><b>10 дней бесплатно!</b></h2>
+				<h2>Попробуйте чип-тюнинг на&nbsp;ваш&nbsp;<span class="current-car">Cadillac </span><br><b>10 дней бесплатно!</b></h2>
 				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день  без всяких заявлений!</h3>
 				<div class="b-7-car" style="background-image: url('i/car.png');"></div>
 			</div>
@@ -341,26 +358,26 @@
 				<form class="b-form-request" action="/kitsend.php" method="POST">
 					<p><b>Оставьте ваши контактные данные</b> и наш менеджер свяжется с Вами в ближайшее время</p>
 					<div class="b-input-string">
-						<select class="b-select-mark" name="mark" required="">
+						<select id="mark-bottom" class="b-select-mark" name="mark-bottom" required="">
 							<option value="" class="default-option">Выберите марку</option>
 						</select>
-						<label for="mark">Пожалуйста, выберите марку автомобиля</label>
+						<label for="mark-bottom">Пожалуйста, выберите марку автомобиля</label>
 					</div>
 					<div class="b-input-string">
-						<select class="b-select-model" name="model" required="">
+						<select id="model-bottom" class="b-select-model" name="model-bottom" required="">
 							<option value="" class="default-option">Выберите модель</option>
 						</select>
-						<label for="model">Пожалуйста, выберите модель автомобиля</label>
+						<label for="model-bottom">Пожалуйста, выберите модель автомобиля</label>
 					</div>
 					<div class="b-input-string">
-						<select class="b-select-engine" name="engine" required="">
+						<select id="engine-bottom" class="b-select-engine" name="engine-bottom" required="">
 							<option value="" class="default-option">Выберите двигатель</option>
 						</select>
-						<label for="engine">Пожалуйста, укажите двигатель</label>
+						<label for="engine-bottom">Пожалуйста, укажите двигатель</label>
 					</div>
 					<div class="b-input-string b-input-phone">
-						<input type="text" name="phone" placeholder="Ваш телефон">
-						<span for="phone" class="icon-phone"></span>
+						<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
+						<span class="icon-phone"></span>
 						<label for="phone">Пожалуйста, укажите ваш телефон</label>
 					</div>
 					<div class="b-input-string b-btn-string">
@@ -422,7 +439,7 @@
 	<div class="b b-9">
 		<div class="b-map-bubble show">
 			<div class="b-map-bubble-inner">
-				<div class="b-map-bubble-text">Свяжитесь с нами<br>или приезжайте по адресу: <br> <b>г. Томск, ул. Смирнова, д. 7/4</b></div>
+				<div class="b-map-bubble-text">Свяжитесь с нами<br>или приезжайте по адресу: <br> <b>г.&nbsp;Томск, ул.&nbsp;Смирнова, д.&nbsp;7/4</b></div>
 				<div class="b-map-bubble-bottom">
 					<a href="tel:+73822337133" class="b-map-phone-1">+7 (3822) 33-71-33</a>
 					<a href="tel:+73822984298" class="b-map-phone-2">98-42-98</a>
@@ -436,7 +453,7 @@
 		<div class="b-block">
 			<div class="b-info clearfix">
 				<div class="b-info-left">
-					<a href="#" class="b-logo"></a>
+					<a href="/" class="b-logo"></a>
 					<div class="b-addr">
 						<span>г. Томск, ул. Смирнова, д. 7/4 </span>
 						<a href="#" class="dashed yellow">посмотреть на карте</a>
@@ -454,13 +471,13 @@
 					<div class="b-politics-copyright">© 2020 ООО «Автобезопасность». <br>Все права защищены.</div>
 					<div class="b-politics-link"><a href="#">Политика конфиденциальности</a></div>
 				</div>
-				<a href="redder.pro" target="_blank" class="b-redder-logo"></a>
+				<a href="https://redder.pro/" target="_blank" class="b-redder-logo"></a>
 			</div>
 		</div>
 	</div>
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
-		<div class="b-popup" id="b-popup-1">
+		<!-- <div class="b-popup" id="b-popup-1">
 			<h3>Оставьте заявку</h3>
 			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
 			<form action="kitsend.php" data-goal="CALLBACK" method="POST" id="b-form-1">
@@ -477,9 +494,9 @@
 					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 				</div>
 			</form>
-		</div>
+		</div> -->
 		<div class="b-popup" id="faq-popup">
-			<h3></h3>
+			<h3>Автобезопасность</h3>
 			<p></p>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-success">
@@ -493,18 +510,18 @@
 			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 		</div>
 	</div>
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
-	<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>
-	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
-	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/jquery.formstyler.min.js"></script>
-	<script type="text/javascript" src="js/KitAnimate.js"></script>
-	<script type="text/javascript" src="js/slick.js"></script>
-	<script type="text/javascript" src="js/mask.js"></script>
-	<script type="text/javascript" src="js/KitSend.js"></script>
-	<script type="text/javascript" src="js/carImages.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>
+	<script src="js/jquery.touch.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.formstyler.min.js"></script>
+	<script src="js/KitAnimate.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/mask.js"></script>
+	<script src="js/KitSend.js"></script>
+	<script src="js/carImages.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

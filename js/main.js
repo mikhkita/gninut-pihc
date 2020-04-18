@@ -170,7 +170,7 @@ $(document).ready(function(){
         var tabs = slick.$slider.parents('.b-tab-block').find('.b-tab-item');
         
         if (isMobile) {
-            var bottom = slick.listHeight - slick.$slides.eq(nextSlide).height() - 8;
+            var bottom = slick.listHeight - slick.$slides.eq(nextSlide).height();
         } else {
             var bottom = slick.listHeight - slick.$slides.eq(nextSlide).height() + 21;
         }
@@ -217,6 +217,25 @@ $(document).ready(function(){
         return false;
     });
 
+    function changeMainBtnPosition(){
+        var btn = $('.b-1').find('.b-btn-cont');
+        var btnHtml = '<div class="b-btn-cont">'+btn.html()+'</div>';
+
+        if (isMobile){
+            $('.b-1-main-inner').after(btnHtml);
+        } else {
+            $('.b-1-main-text').after(btnHtml);
+        }
+
+        btn.remove();
+    }
+
+    changeMainBtnPosition();
+
+    $(window).resize(function(){
+        changeMainBtnPosition();
+    });
+
     initialize();
 
     function initialize() {
@@ -238,9 +257,6 @@ $(document).ready(function(){
             var bubble = $(document).find('.b-map-bubble');
 
             if (bubble.hasClass('show')) {
-                bubble.animate({
-                    opacity : 'hide',
-                }, 300);
                 bubble.removeClass('show');
             }
         });
@@ -250,7 +266,7 @@ $(document).ready(function(){
         var marker = new google.maps.Marker({
             position: latlng,
             icon: {
-                url: "http://localhost/autosafe/i/pin.svg", // url
+                url: "/i/pin.svg", // url
                 scaledSize: new google.maps.Size(50, 67), // scaled size
                 origin: new google.maps.Point(0,0), // origin
                 anchor: new google.maps.Point(19,58) // anchor
@@ -262,9 +278,6 @@ $(document).ready(function(){
             var bubble = $(document).find('.b-map-bubble');
             
             if (!bubble.hasClass('show')) {
-                bubble.animate({
-                    opacity : 'show',
-                }, 300);
                 bubble.addClass('show');
             }
             
@@ -402,6 +415,14 @@ $(document).ready(function(){
             $('.b-5-motor-default').removeClass("show");
             $('.b-5-motor-fill').addClass("show");
         }
+
+        $(this).parents('form').find('select').each(function(){
+            if ($(this).hasClass('error')){
+                $(this).parent().addClass('error');
+            } else {
+                $(this).parent().removeClass('error');
+            }
+        });
         
         return false;
     });

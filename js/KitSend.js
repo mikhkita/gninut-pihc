@@ -134,8 +134,14 @@ $(document).ready(function(){
 		}
 	});
 
+	$('input').on('input', function(){
+		if ($(this).hasClass('error')) {
+			$(this).valid();
+		}
+	});
+
 	$(".ajax").parents("form").submit(function(){
-		if( $(this).find('select').each(function(){
+		$(this).find('select').each(function(){
 			if ($(this).hasClass('error')){
 				$(this).parent().addClass('error');
 			} else {
@@ -148,7 +154,7 @@ $(document).ready(function(){
 			// 	$(this).removeClass('error');
 			// 	$(this).parents('.jq-selectbox').removeClass('error');
 			// }
-		}));
+		});
   		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
