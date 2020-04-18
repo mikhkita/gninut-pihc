@@ -30,6 +30,17 @@ $(document).ready(function(){
             isTablet = false;
             isMobile = true;
         }
+
+        //перенести b-5-top-right
+        if(isMobile){
+            if($('.b-5-top-right-desktop .b-5-top-right-content').length){
+                $('.b-5-top-right-mobile').append($('.b-5-top-right-desktop .b-5-top-right-content'));
+            }
+        }else{
+            if($('.b-5-top-right-mobile .b-5-top-right-content').length){
+                $('.b-5-top-right-desktop').append($('.b-5-top-right-mobile .b-5-top-right-content'));
+            }
+        }
     }
 
     function bindFancy(){
@@ -276,6 +287,52 @@ $(document).ready(function(){
 
     // ===========
 
+    function findElementCar(targetKey, obj, returnKey) {
+        returnKey = returnKey || false;
+        targetKey = targetKey.toLowerCase();
+        var matchObj = false,
+            matchKey = false;
+        for (key in obj) {
+            if(key.toLowerCase() === targetKey){
+                matchObj = obj[key];
+                matchKey = key;
+            }
+        }
+
+        return (returnKey) ? matchKey : matchObj;
+    }
+
+    function changeOtherSelect($selector, value) {
+        $($selector).val(value);
+        $('.b-form-calc-power select, .b-form-request select').each(function(){
+            if ($(this).val().length !== 0) {
+                $(this).removeClass('error');
+                $(this).parent().removeClass('error');
+                $(this).parent().addClass('not-empty');
+            } else {
+                $(this).parent().removeClass('not-empty');
+            }
+        });
+    }
+
+    function changeCarImages(mark, model) {
+        model = model || false;
+        var target = mark,
+            $carSelectors = '.b-car, .b-3-car, .b-7-car';
+        if(model){
+            target += "|"+model;
+            if(carImages[target]){
+                $($carSelectors).css('background-image', 'url("'+carImages[target]+'")');
+            }else if(carImages[mark]){
+                $($carSelectors).css('background-image', 'url("'+carImages[mark]+'")');
+            }
+        }else if(carImages[mark]){
+            $($carSelectors).css('background-image', 'url("'+carImages[mark]+'")');
+        }
+
+        $('.current-car').text(mark + ((model) ? " "+model : ""));
+    }
+
     var arCars = {};
     $.ajax({
         type: "GET",
@@ -287,6 +344,19 @@ $(document).ready(function(){
                     $('.b-select-mark').append('<option value="' + mark + '">' + mark + '</option>');
                 }
             }
+            if($('.b-5').attr("data-mark")){
+                var targetMark = findElementCar($('.b-5').attr("data-mark"), arCars, true);
+                if(targetMark){
+                    $('.b-select-mark').val(targetMark).change();
+
+                    if($('.b-5').attr("data-model")){
+                        var targetModel = findElementCar($('.b-5').attr("data-model"), arCars[targetMark], true);
+                        if(targetModel){
+                            $('.b-select-model').val(targetModel).change();
+                        }
+                    }
+                }
+            }
             //console.log(arCars);
         },
     });
@@ -294,37 +364,56 @@ $(document).ready(function(){
     var $calcForm = $('.b-form-calc-power').validate({errorElement : "span"});
 
     $(document).on('change', '.b-select-mark', function(){
+        var $form = $(this).parents("form");
         $(".b-select-model option:not(.default-option), .b-select-engine option:not(.default-option)").remove();
+        var target = false;
         if($(this).val()){
+            target = findElementCar($(this).val(), arCars);
+        }
+        if(target){
             $calcForm.resetForm();
-            for (model in arCars[$(this).val()]) {
+            for (model in target) {
                 if(model){
                     $('.b-select-model').append('<option value="' + model + '">' + model + '</option>');
                 }
             }
+            changeCarImages($(this).val());
         }
+        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-mark' : '.b-form-calc-power .b-select-mark', $(this).val());
     });
 
     $(document).on('change', '.b-select-model', function(){
+        var $form = $(this).parents("form");
         $(".b-select-engine option:not(.default-option)").remove();
-        if($(this).val() && $('.b-select-mark').val()){
+        var target = false;
+        if($(this).val() && $form.find('.b-select-mark').val()){
+            target = findElementCar($(this).val(), arCars[$form.find('.b-select-mark').val()]);
+        }
+        if(target){
             $calcForm.resetForm();
-            var arModel = arCars[$('.b-select-mark').val()][$(this).val()];
-            for (engine in arModel) {
-                if(engine && arModel[engine] && arModel[engine].powerBefore && arModel[engine].powerAfter){
+            for (engine in target) {
+                if(engine && target[engine] && target[engine].powerBefore && target[engine].powerAfter){
                     $('.b-select-engine').append('<option value="' + engine + '">' + 
-                        arModel[engine].name + ' (' + arModel[engine].powerBefore + ' л.с.)' + '</option>');
+                        target[engine].name + ' (' + target[engine].powerBefore + ' л.с.)' + '</option>');
                 }
             }
+            changeCarImages($form.find('.b-select-mark').val(), $(this).val());
         }
+        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-model' : '.b-form-calc-power .b-select-model', $(this).val());
+    });
+
+    $(document).on('change', '.b-select-engine', function(){
+        var $form = $(this).parents("form");
+        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-engine' : '.b-form-calc-power .b-select-engine', $(this).val());
     });
 
     $(document).on('click', '.b-btn-calc-power', function(){
-
+        var $form = $(this).parents("form");
         if($calcForm.form()){
-            alert(arCars[$('.b-select-mark').val()][$('.b-select-model').val()][$('.b-select-engine').val()].powerAfter);
-        } else {
-            
+            $('.b-power-after .power-value').text(
+                arCars[$form.find('.b-select-mark').val()][$form.find('.b-select-model').val()][$form.find('.b-select-engine').val()].powerAfter);
+            $('.b-5-motor-default').removeClass("show");
+            $('.b-5-motor-fill').addClass("show");
         }
 
         $(this).parents('form').find('select').each(function(){

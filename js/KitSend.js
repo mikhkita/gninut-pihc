@@ -168,11 +168,22 @@ $(document).ready(function(){
 			if( $this.attr("data-goal") ){
 				yaCounter12345678.reachGoal($this.attr("data-goal"));
 			}
-
+			//собрать параметры для b-form-request
+			var params = "";
+			if($this.hasClass("b-form-request")){
+				$this.find("select, input, textarea").each(function(){
+					if($(this).hasClass("b-select-engine")){
+						params += $(this).attr("name") + "=" + $(this).find('option:selected').text()+"&";
+					}else{
+						params += $(this).serialize()+"&";
+					}
+				});
+			}
+			console.log(params);
   			$.ajax({
 			  	type: $(this).attr("method"),
 			  	url: $(this).attr("action"),
-			  	data:  $this.serialize(),
+			  	data: (params) ? params : $this.serialize(),
 				success: function(msg){
 					var $form;
 					if( msg == "1" ){

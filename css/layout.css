@@ -1295,18 +1295,71 @@ input:-moz-placeholder {
 				font-size: 32px;
 				line-height: 40px;
 			}
+		.b-5-top-right.b-5-top-right-mobile{
+			display: none;
+		}
 		.b-5-top-right{
+			position: relative;
 			display: inline-block;
 			vertical-align: middle;
 			width: calc(100%/2 - 148px);
 			margin-bottom: 12px;
 			margin-left: 61px;
-			background-image: url('../i/motor.svg');
-			background-size: contain;
-			background-position: 50% 100%;
-			background-repeat: no-repeat;
 			height: 277px;
 		}
+			.b-5-top-right-content{
+				width: 100%;
+				height: 100%;
+			}
+			.b-5-motor-back{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+				background-position: 50% 100%;
+				background-repeat: no-repeat;
+				opacity: 0;
+				visibility: hidden;
+				-webkit-transition: opacity .3s, visibility .3s;
+				-o-transition: opacity .3s, visibility .3s;
+				transition: opacity .3s, visibility .3s;
+			}
+			.b-5-motor-default{
+				background-image: url('../i/motor.svg');
+			}
+			.b-5-motor-fill{
+				background-image: url('../i/motor-fill.svg');
+				opacity: 0;
+				visibility: hidden;
+			}
+			.b-5-motor-back.show{
+				opacity: 1;
+				visibility: visible;
+			}
+				.b-power-after{
+					position: absolute;
+					top: 26%;
+					left: 0;
+					width: 100%;
+					text-align: center;
+					padding-left: 32px;
+				}
+					.b-power-after .power-top{
+						font-size: 18px;
+						line-height: 26px;
+					}
+						.b-power-after .power-value{
+							font-family: 'ProximaNova-Bold';
+							font-size: 100px;
+							line-height: 120px;
+							margin-right: 8px;
+						}
+					.b-power-after .power-note{
+						max-width: 253px;
+						font-size: 16px;
+						line-height: 24px;
+						margin: 0 auto;
+					}
 	.b-5-bottom{
 
 	}
@@ -1355,7 +1408,7 @@ input:-moz-placeholder {
 				box-shadow: 0 3px 0 0 rgba(255,255,255,0.13);
 				color: rgba(255,255,255,0.7);
 				border-radius: 5px;
-				padding: 21px 24px 19px;
+				padding: 21px 36px 19px 24px;
 				width: 100%;
 				height: 64px;
 				border: 0;
@@ -1467,6 +1520,28 @@ input:-moz-placeholder {
 					max-width: 200px;
 					display: inline-block;
 				}
+
+@media screen  and (max-width: 1220px){
+	.b-5-top-left {
+	    width: calc(100% - 380px);
+	}
+	.b-5-top-right {
+	    width: 342px;
+	    margin-left: 32px;
+	    height: 218px;
+	    margin-bottom: 0;
+	}
+		.b-power-after .power-value {
+		    font-size: 70px;
+		    line-height: 85px;
+		    margin-right: 8px;
+		}
+		.b-power-after .power-note {
+		    font-size: 14px;
+		    line-height: 20px;
+		}
+}
+
 @media screen  and (max-width: 1040px){
 	.b-5{
 		background-size: cover;
@@ -1511,18 +1586,6 @@ input:-moz-placeholder {
 		background-size: 100% 100%;
 		position: relative;
 	}
-	.b-5:after{
-		content: '';
-		display: block;
-		margin: 0 auto;
-		margin-top: 50px;
-		width: calc(100% - 102px);
-		height: 172px;
-	    background-image: url(../i/motor.svg);
-	    background-size: contain;
-	    background-position: 50% 100%;
-	    background-repeat: no-repeat;
-	}
 		.b-5-top{
 			margin-bottom: 0;
 		}
@@ -1554,7 +1617,41 @@ input:-moz-placeholder {
 			.b-input:last-child{
 				margin-bottom: 0;
 			}
+	.b-5-top-right.b-5-top-right-mobile{
+		display: block;
+		margin: 50px auto 0 auto;
+	}
+	.b-5-top-right.b-5-top-right-desktop{
+		display: none;
+	}
+	.b-5-top-right{
+		margin: 0 auto;
+		width: 343px;
+		margin-bottom: 0;
+		margin-left: 0;
+		height: 218px;
+	}
 }
+
+@media screen  and (max-width: 374px){
+	.b-5-top-right{
+		width: 288px;
+		height: 183px;
+	}
+	.b-power-after {
+	    position: absolute;
+	    top: 22%;
+	}
+	.b-power-after .power-value {
+	    font-size: 60px;
+	    line-height: 72px;
+	    margin-right: 4px;
+	}
+	.b-power-after .power-note {
+	    max-width: 193px;
+	}
+}
+
 /*************   b-5   *************/
 
 /*************   b-6   *************/
