@@ -1,3 +1,7 @@
+<?
+	// $_GET["keywords"] = "Acura|MDx";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +44,7 @@
 			</div>
 			<div class="b-1-main">
 				<div class="b-1-main-inner">
-					<h1>Сделайте ваш Cadillac <br>мощнее на 10-30%  <br>за 1 день!</h1>
+					<h1>Сделайте ваш <span class="current-car">Cadillac</span> <br>мощнее на 10-30%  <br>за 1 день!</h1>
 					<div class="b-1-main-text">Программный чип-тюнинг автомобиля раскроет заложенные производителем мощности автомобиля</div>
 					<div class="b-btn-cont">
 						<a href="#" class="b-btn">
@@ -59,7 +63,7 @@
 	</div>
 	<div class="b b-2">
 		<div class="b-block">
-			<h2>Ощутите <b>новые впечатления</b> от вождения вашего Cadillac</h2>
+			<h2>Ощутите <b>новые впечатления</b> от вождения вашего <span class="current-car">Cadillac</span></h2>
 			<div class="b-2-list">
 				<div class="b-2-item">
 					<div class="b-2-item-img" style="background-image: url('i/b-2-1.svg');"></div>
@@ -107,7 +111,7 @@
 	</div>
 	<div class="b b-4">
 		<div class="b-block">
-			<h3>Заводская программа на вашем Cadillac  <b>мешает&nbsp;использовать двигатель на полную мощность</b></h3>
+			<h3>Заводская программа на вашем <span class="current-car">Cadillac </span> <b>мешает&nbsp;использовать двигатель на полную мощность</b></h3>
 			<div class="b-tab-block">
 				<h2><b>4 причины</b>, почему производители авто намеренно занижают мощность </h2>
 				<div class="b-tab-list">
@@ -183,17 +187,40 @@
 			</div>
 		</div>
 	</div>
-	<div class="b b-5">
+	<?
+		$mark = "";
+		$model = "";
+		if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
+			$arKeywords = explode("|", $_GET["keywords"]);
+			if(count($arKeywords) > 1){
+				$mark = $arKeywords[0];
+				$model = $arKeywords[1];
+			}else{
+				$mark = $arKeywords[0];
+			}
+		}
+	?>
+	<div class="b b-5" data-mark="<?if($mark) echo $mark;?>" data-model="<?if($model) echo $model;?>">
 		<div class="b-block">
 			<div class="b-5-top">
 				<div class="b-5-top-left">
 					<h2><b>Посмотрите</b>, на что способен ваш <span class="desktop">автомобиль</span><span class="mobile">авто</span> на самом деле</h2>
 					<h3>Просто выберите свой автомобиль и узнайте результат прямо на сайте</h3>
 				</div>
-				<div class="b-5-top-right"></div>
+				<div class="b-5-top-right b-5-top-right-desktop">
+					<div class="b-5-top-right-content">
+						<div class="b-5-motor-back show b-5-motor-default"></div>
+						<div class="b-5-motor-back b-5-motor-fill">
+							<div class="b-power-after">
+								<div class="power-top"><span class="power-value"></span>л. с.</div>
+								<div class="power-note"><b>Настоящая заводская мощность</b>, доступная после чип-тюнинга</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="b-5-bottom">
-				<form class="b-form-calc-power" action="kitsend.php" method="POST">
+				<form class="b-form-calc-power" action="" method="">
 					<div class="b-input">
 						<select class="b-select-mark" name="mark" required>
 							<option value="" class="default-option">Выберите марку</option>
@@ -220,6 +247,9 @@
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class="b-5-top-right b-5-top-right-mobile">
+				
 			</div>
 		</div>
 	</div>
@@ -303,48 +333,28 @@
 	<div class="b b-7">
 		<div class="b-block">
 			<div class="b-7-left">
-				<h2>Попробуйте чип-тюнинг на ваш Cadillac <br><b>10 дней бесплатно!</b></h2>
+				<h2>Попробуйте чип-тюнинг на ваш <span class="current-car">Cadillac </span><br><b>10 дней бесплатно!</b></h2>
 				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день  без всяких заявлений!</h3>
 				<div class="b-7-car" style="background-image: url('i/car.png');"></div>
 			</div>
 			<div class="b-7-right">
-				<form action="/kitsend.php" method="POST">
+				<form class="b-form-request" action="/kitsend.php" method="POST">
 					<p><b>Оставьте ваши контактные данные</b> и наш менеджер свяжется с Вами в ближайшее время</p>
 					<div class="b-input-string">
-						<select name="mark" required="">
-							<option value="Выберите марку" selected disabled>Выберите марку</option>
-							<option value="Toyota">Toyota</option>
-							<option value="BMW">BMW</option>
-							<option value="Mercedes">Mercedes</option>
-							<option value="Cadillac">Cadillac</option>
-							<option value="Opel">Opel</option>
-							<option value="Mazda">Mazda</option>
-							<option value="Honda">Honda</option>
-							<option value="Nissan">Nissan</option>
+						<select class="b-select-mark" name="mark" required="">
+							<option value="" class="default-option">Выберите марку</option>
 						</select>
 						<label for="mark">Пожалуйста, выберите марку автомобиля</label>
 					</div>
 					<div class="b-input-string">
-						<select name="model" required="">
-							<option value="Выберите модель" selected disabled>Выберите модель</option>
-							<option value="1-series">1-series</option>
-							<option value="3-series">3-series</option>
-							<option value="5-series">5-series</option>
-							<option value="7-series">7-series</option>
-							<option value="X5">X5</option>
-							<option value="X6">X6</option>
+						<select class="b-select-model" name="model" required="">
+							<option value="" class="default-option">Выберите модель</option>
 						</select>
 						<label for="model">Пожалуйста, выберите модель автомобиля</label>
 					</div>
 					<div class="b-input-string">
-						<select name="engine" required="">
-							<option value="Выберите двигатель" selected disabled>Выберите двигатель</option>
-							<option value="1.8">1.8</option>
-							<option value="2.0">2.0</option>
-							<option value="2.5">2.5</option>
-							<option value="3.0">3.0</option>
-							<option value="4.7">4.7</option>
-							<option value="6.3">6.3</option>
+						<select class="b-select-engine" name="engine" required="">
+							<option value="" class="default-option">Выберите двигатель</option>
 						</select>
 						<label for="engine">Пожалуйста, укажите двигатель</label>
 					</div>
@@ -494,6 +504,7 @@
 	<script type="text/javascript" src="js/slick.js"></script>
 	<script type="text/javascript" src="js/mask.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
+	<script type="text/javascript" src="js/carImages.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
