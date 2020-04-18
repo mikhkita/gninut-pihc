@@ -1419,6 +1419,9 @@ input:-moz-placeholder {
 				-webkit-appearance: none;
 				appearance: none;
 			}
+			select option{
+				color: #282828;
+			}
 			.b-input.not-empty select{
 				color: #fff;
 			}

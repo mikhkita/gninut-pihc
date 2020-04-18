@@ -61,11 +61,11 @@
 			</div>
 			<div class="b-1-main">
 				<div class="b-1-main-inner">
-					<h1>Сделайте ваш <span class="current-car">Cadillac</span> <br>мощнее на 10-30%  <br>за 1 день!</h1>
+					<h1>Сделайте ваш <span class="current-car">Cadillac</span> <br>мощнее на 10-30% <br>за 1 день!</h1>
 					<div class="b-1-main-text">Программный чип-тюнинг автомобиля раскроет заложенные производителем мощности автомобиля</div>
 					<div class="b-btn-cont">
 						<a href="#" class="b-btn">
-							<span><b>Рассчитать точный прирост </b><br>мощности вашего авто</span>
+							<span><b>Рассчитать точный прирост</b><br>мощности вашего авто</span>
 						</a>
 						<div class="b-btn-info">это не займет много времени</div>
 					</div>
@@ -105,7 +105,7 @@
 		<div class="b-3-car-cont">
 			<div class="b-block">
 				<div class="b-3-car" style="background-image: url('i/car.png');"></div>
-				<div class="b-3-car-text"><b>Представьте</b>, что ваш автомобиль срывается с места, как только  вы&nbsp;нажали на педаль газа…</div>
+				<div class="b-3-car-text"><b>Представьте</b>, что ваш автомобиль срывается с места, как только вы&nbsp;нажали на педаль газа…</div>
 			</div>
 		</div>
 		<div class="b-3-inner">
@@ -351,7 +351,7 @@
 		<div class="b-block">
 			<div class="b-7-left">
 				<h2>Попробуйте чип-тюнинг на&nbsp;ваш&nbsp;<span class="current-car">Cadillac </span><br><b>10 дней бесплатно!</b></h2>
-				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день  без всяких заявлений!</h3>
+				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день без всяких заявлений!</h3>
 				<div class="b-7-car" style="background-image: url('i/car.png');"></div>
 			</div>
 			<div class="b-7-right">
@@ -402,7 +402,7 @@
 	</div>
 	<div class="b b-8">
 		<div class="b-block">
-			<h2>Остались вопросы? Мы подготовили для вас <b>5&nbsp;популярных вопросов </b> и&nbsp;ответили на них</h2>
+			<h2>Остались вопросы? Мы подготовили для вас <b>5&nbsp;популярных вопросов</b> и&nbsp;ответили на них</h2>
 			<div class="b-faq-block">
 				<div class="b-faq-left">
 					<a href="#faq-popup" class="b-faq active fancy" data-id="faq-1"><span class="mobile-num">1.</span><span>Безопасен ли чип-тюнинг?</span></a>
@@ -439,7 +439,7 @@
 	<div class="b b-9">
 		<div class="b-map-bubble show">
 			<div class="b-map-bubble-inner">
-				<div class="b-map-bubble-text">Свяжитесь с нами<br>или приезжайте по адресу: <br> <b>г.&nbsp;Томск, ул.&nbsp;Смирнова, д.&nbsp;7/4</b></div>
+				<div class="b-map-bubble-text">Свяжитесь с нами<br>или приезжайте по адресу:<br> <b>г.&nbsp;Томск, ул.&nbsp;Смирнова, д.&nbsp;7/4</b></div>
 				<div class="b-map-bubble-bottom">
 					<a href="tel:+73822337133" class="b-map-phone-1">+7 (3822) 33-71-33</a>
 					<a href="tel:+73822984298" class="b-map-phone-2">98-42-98</a>

@@ -336,7 +336,7 @@ $(document).ready(function(){
     var arCars = {};
     $.ajax({
         type: "GET",
-        url: "/storage/cars.json",
+        url: "./storage/cars.json",
         success: function(res){
             arCars = res;
             for (mark in arCars) {
