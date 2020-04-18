@@ -772,7 +772,7 @@ input:-moz-placeholder {
 				background-repeat: no-repeat; 
 				margin-bottom: 34px;
 			    background-size: contain;
-			    background-position: 50% 100%;
+			    background-position: left;
 			    background-repeat: no-repeat;
 			}
 			.b-2-item-text{
@@ -801,6 +801,7 @@ input:-moz-placeholder {
 			display: inline-block;
 			vertical-align: middle;
 			margin-bottom: 0;
+			background-position: center;
 		}
 		.b-2-item-text{
 			width: calc(100% - 86px);
@@ -1624,8 +1625,8 @@ input:-moz-placeholder {
 /*************   b-7   *************/
 
 .b-7{
-	background-image: url('../i/b-7.jpg');
-	background-size: cover;
+	background: linear-gradient(0, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10%), linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10%), url(../i/b-7.jpg);
+    background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-bottom: 70px;
