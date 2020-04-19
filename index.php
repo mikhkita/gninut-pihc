@@ -128,7 +128,7 @@
 	</div>
 	<div class="b b-4">
 		<div class="b-block">
-			<h3>Заводская программа на вашем <span class="current-car">Cadillac </span> <b>мешает&nbsp;использовать двигатель на полную мощность</b></h3>
+			<h3>Заводская программа на вашем <span class="current-car">Cadillac</span> <b>мешает&nbsp;использовать двигатель на полную мощность</b></h3>
 			<div class="b-tab-block">
 				<h2><b>4 причины</b>, почему производители авто намеренно занижают мощность </h2>
 				<div class="b-tab-list">
