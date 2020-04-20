@@ -1,6 +1,8 @@
 <?php
-	require_once("phpmail.php");
+	echo "1";
+	die();
 
+	require_once("phpmail.php");
 	$email_admin = "beatbox787@gmail.com";
 	// $email_admin = "soc.taxi.35@gmail.com";
 

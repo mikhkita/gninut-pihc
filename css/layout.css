@@ -178,12 +178,53 @@ input.error,textarea.error{
 	max-width: 1176px;
 	margin: 0px auto;
 }
+.b-popup{
+	max-width: 448px;
+	padding: 50px 65px 47px 65px;
+	border-radius: 5px;
+}
+.b-popup .b-btn{
+	width: 100%;
+}
+	.b-popup .b-btn span{
+		font-family: 'ProximaNova-Bold';
+		font-size: 18px;
+		color: #40372A;
+		letter-spacing: 0;
+		text-align: center;
+		line-height: 22px;
+	}
+.b-popup label{
+	display: none;
+}
+.fancybox-slide--html .fancybox-close-small{
+    padding: 2px;
+    right: 12px;
+    top: 12px;
+}
+.fancybox-button svg path{
+	fill: #E4E4E4;
+}
 .b-popup h3{
 	font-family: 'Exo2-BoldItalic';
 	font-size: 32px;
 	color: #282828;
 	line-height: 40px;
 	margin-bottom: 32px;
+}
+.b-popup .b-popup-head{
+	font-family: 'Exo2-BoldItalic';
+	font-size: 44px;
+	color: #282828;
+	line-height: 55px;
+	margin-bottom: 32px;
+}
+.b-popup h4{
+	font-family: 'ProximaNova-Regular';
+	font-size: 18px;
+	color: #282828;
+	line-height: 26px;
+	margin-bottom: 40px;
 }
 .b-popup p{
 	font-family: 'ProximaNova-Regular';
@@ -730,7 +771,7 @@ input:-moz-placeholder {
 		left: auto;
 	}
 }
-@media screen  and (max-height: 600px){
+@media screen and (max-height: 600px) and (max-width: 768px){
 	.b-phone{
 		text-align: right;
 	}
@@ -1447,7 +1488,8 @@ input:-moz-placeholder {
 			.b-input:before{
 				top: 50%;
 			}
-			.b-input-phone:before{
+			.b-input-phone:before,
+			.b-input-user:before{
 				display: none;
 			}
 			.b-input-string.error:before{
@@ -1776,7 +1818,8 @@ input:-moz-placeholder {
 		z-index: 1;
 		position: relative;
 	}
-		.b-7-right p{
+		.b-form-request p,
+		.b-popup p{
 			margin-bottom: 32px;
 			font-size: 18px;
 			line-height: 26px;
@@ -1797,6 +1840,20 @@ input:-moz-placeholder {
 			}
 			.b-input-phone{
 				position: relative;
+			}
+			.b-input-user span.icon-user:before{
+				content: '\e902';
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				left: 23px;
+				top: 18px;
+				font-size: 24px;
+				font-family: 'icomoon';
+				color: #D2D6DB;
+			}
+			.b-input-user input.error + span + span.icon-user:before{
+				color: #CD9292;
 			}
 			.b-input-phone span.icon-phone:before{
 				content: '\e900';
@@ -1865,14 +1922,14 @@ input:-moz-placeholder {
 	.b-7 select.error + .jq-selectbox__select .jq-selectbox__select-text.placeholder{
 		color: #CD9292;
 	}
-	.b-7 input.error{
+	.b-input-string input.error{
 		background: #FFEAEA;
 		box-shadow: 0 -3px 0 0 #F8D7D7;
 	}
-	.b-7 input.error::-webkit-input-placeholder {
+	.b-input-string input.error::-webkit-input-placeholder {
 		color: #CD9292;
 	}
-	.b-7 input.error:-moz-placeholder {
+	.b-input-string input.error:-moz-placeholder {
 		color: #CD9292;
 	}
 

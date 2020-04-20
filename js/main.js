@@ -101,8 +101,6 @@ $(document).ready(function(){
     $(window).resize(resize);
     resize();
 
-    bindFancy();
-
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
             $('[placeholder]').focus(function() {
@@ -426,5 +424,7 @@ $(document).ready(function(){
         
         return false;
     });
+
+    bindFancy();
 
 });

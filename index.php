@@ -55,7 +55,7 @@
 				<div class="b-info-right">
 					<div class="b-phone clearfix">
 						<a href="tel:+73822337133" class="b-phone-link">+7 (3822) 33-71-33</a>
-						<a href="#" class="dashed yellow">перезвоните мне</a>
+						<a href="#b-phone-popup" class="dashed yellow fancy">перезвоните мне</a>
 					</div>
 				</div>
 			</div>
@@ -64,7 +64,7 @@
 					<h1>Сделайте ваш <span class="current-car">Cadillac</span> <br>мощнее на 10-30% <br>за 1 день!</h1>
 					<div class="b-1-main-text">Программный чип-тюнинг автомобиля раскроет заложенные производителем мощности автомобиля</div>
 					<div class="b-btn-cont">
-						<a href="#" class="b-btn">
+						<a href="#b-main-popup" class="b-btn fancy">
 							<span><b>Рассчитать точный прирост</b><br>мощности вашего авто</span>
 						</a>
 						<div class="b-btn-info">это не займет много времени</div>
@@ -355,7 +355,7 @@
 				<div class="b-7-car" style="background-image: url('i/car.png');"></div>
 			</div>
 			<div class="b-7-right">
-				<form class="b-form-request" action="/kitsend.php" method="POST">
+				<form class="b-form-request" action="kitsend.php" method="POST">
 					<p><b>Оставьте ваши контактные данные</b> и наш менеджер свяжется с Вами в ближайшее время</p>
 					<div class="b-input-string">
 						<select id="mark-bottom" class="b-select-mark" name="mark-bottom" required="">
@@ -462,7 +462,7 @@
 				<div class="b-info-right">
 					<div class="b-phone clearfix">
 						<a href="tel:+73822337133" class="b-phone-link">+7 (3822) 33-71-33</a>
-						<a href="#" class="dashed yellow">перезвоните мне</a>
+						<a href="#b-phone-popup" class="dashed yellow fancy">перезвоните мне</a>
 					</div>
 				</div>
 			</div>
@@ -477,37 +477,95 @@
 	</div>
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
-		<!-- <div class="b-popup" id="b-popup-1">
-			<h3>Оставьте заявку</h3>
-			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
-			<form action="kitsend.php" data-goal="CALLBACK" method="POST" id="b-form-1">
-				<div class="b-popup-form">
-					<label for="name">Введите Ваше имя</label>
-					<input type="text" id="name" name="name" required/>
-					<label for="tel">Введите Ваш номер телефона</label>
-					<input type="text" id="tel" name="phone" required/>
-					<label for="tel">Введите Ваш E-mail</label>
-					<input type="text" id="tel" name="email" required/>
-					<input type="hidden" name="subject" value="Заказ"/>
-					<input type="submit" style="display:none;">
-					<a href="#" class="b-btn b-blue-btn ajax">Заказать</a>
-					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+		<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+		<div class="b-popup" id="b-main-popup">
+			<form class="b-form-request" action="kitsend.php" method="POST">
+				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер свяжется с Вами и рассчитает точный прирост мощности</p>
+				<div class="b-input-string">
+					<select id="mark-bottom" class="b-select-mark" name="mark-bottom" required="">
+						<option value="" class="default-option">Выберите марку</option>
+					</select>
+					<label for="mark-bottom">Пожалуйста, выберите марку автомобиля</label>
+				</div>
+				<div class="b-input-string">
+					<select id="model-bottom" class="b-select-model" name="model-bottom" required="">
+						<option value="" class="default-option">Выберите модель</option>
+					</select>
+					<label for="model-bottom">Пожалуйста, выберите модель автомобиля</label>
+				</div>
+				<div class="b-input-string">
+					<select id="engine-bottom" class="b-select-engine" name="engine-bottom" required="">
+						<option value="" class="default-option">Выберите двигатель</option>
+					</select>
+					<label for="engine-bottom">Пожалуйста, укажите двигатель</label>
+				</div>
+				<div class="b-input-string b-input-phone">
+					<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
+					<span class="icon-phone"></span>
+					<label for="phone">Пожалуйста, укажите ваш телефон</label>
+				</div>
+				<div class="b-input-string b-btn-string">
+					<div class="b-btn-cont">
+						<a href="#" class="b-btn ajax">
+							<span>Оставить заявку на расчет прироста&nbsp;мощности</span>
+						</a>
+					</div>
+				</div>
+				<div class="b-input-string-checkbox">
+					<div class="b-checkbox">
+						<input id="politics" name="politics" type="checkbox" value="politics" required checked>
+						<label for="politics" class="checkbox">
+							<span class="icon-checkbox"></span>
+							Я принимаю <a href="dashed">условия передачи информации</a>
+						</label>
+					</div>
 				</div>
 			</form>
-		</div> -->
+		</div>
+		<div class="b-popup" id="b-phone-popup">
+			<form action="kitsend.php" method="POST">
+				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер перезвонит Вам  в&nbsp;ближайшее время</p>
+				<div class="b-input-string b-input-user">
+					<input type="text" id="name" name="name" placeholder="Ваше имя" required="">
+					<span class="icon-user"></span>
+					<label for="name">Пожалуйста, укажите ваш телефон</label>
+				</div>
+				<div class="b-input-string b-input-phone">
+					<input type="text" id="phone" name="phone" placeholder="Ваш телефон" required="">
+					<span class="icon-phone"></span>
+					<label for="phone">Пожалуйста, укажите ваш телефон</label>
+				</div>
+				<div class="b-input-string b-btn-string">
+					<div class="b-btn-cont">
+						<a href="#" class="b-btn ajax">
+							<span>Оставить заявку на расчет прироста&nbsp;мощности</span>
+						</a>
+					</div>
+				</div>
+				<div class="b-input-string-checkbox">
+					<div class="b-checkbox">
+						<input id="politics" name="politics" type="checkbox" value="politics" required checked>
+						<label for="politics" class="checkbox">
+							<span class="icon-checkbox"></span>
+							Я принимаю <a href="dashed">условия передачи информации</a>
+						</label>
+					</div>
+				</div>
+			</form>
+		</div>
 		<div class="b-popup" id="faq-popup">
 			<h3>Автобезопасность</h3>
 			<p></p>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-success">
-			<h3>Спасибо!</h3>
-			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<div class="b-popup-head">Спасибо!</div>
+			<h4>Ваша заявка успешно отправлена, наш менеджер уже работает над ней и в скором времени свяжется с Вами</h4>
+			<a href="#" class="b-btn" onclick="$.fancybox.close(); return false;"><span>Закрыть</span></a>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-error">
-			<h3>Ошибка отправки!</h3>
+			<div class="b-popup-head">Ошибка отправки!</div>
 			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<a href="#" class="b-btn" onclick="$.fancybox.close(); return false;"><span>Закрыть</span></a>
 		</div>
 	</div>
 	<script src="js/jquery-3.2.1.min.js"></script>

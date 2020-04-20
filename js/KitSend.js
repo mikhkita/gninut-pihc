@@ -6,39 +6,39 @@ function getNextField($form){
 	return j;
 }
 
-function fancyOpen(el){
-    $.fancybox(el,{
-    	padding:0,
-    	fitToView: false,
-        scrolling: 'no',
-        beforeShow: function(){
-			$(".fancybox-wrap").addClass("beforeShow");
-			if( !device.mobile() ){
-		    	$('html').addClass('fancybox-lock'); 
-		    	$('.fancybox-overlay').html($('.fancybox-wrap')); 
-		    }
-		},
-		afterShow: function(){
-			$(".fancybox-wrap").removeClass("beforeShow");
-			$(".fancybox-wrap").addClass("afterShow");
-			setTimeout(function(){
-                $('.fancybox-wrap').css({
-                    'position':'absolute'
-                });
-                $('.fancybox-inner').css('height','auto');
-            },200);
-		},
-		beforeClose: function(){
-			$(".fancybox-wrap").removeClass("afterShow");
-			$(".fancybox-wrap").addClass("beforeClose");
-		},
-		afterClose: function(){
-			$(".fancybox-wrap").removeClass("beforeClose");
-			$(".fancybox-wrap").addClass("afterClose");
-		},
-    }); 
-    return false;
-}
+// function fancyOpen(el){
+//     $.fancybox(el,{
+//     	padding:0,
+//     	fitToView: false,
+//         scrolling: 'no',
+//         beforeShow: function(){
+// 			$(".fancybox-wrap").addClass("beforeShow");
+// 			if( !device.mobile() ){
+// 		    	$('html').addClass('fancybox-lock'); 
+// 		    	$('.fancybox-overlay').html($('.fancybox-wrap')); 
+// 		    }
+// 		},
+// 		afterShow: function(){
+// 			$(".fancybox-wrap").removeClass("beforeShow");
+// 			$(".fancybox-wrap").addClass("afterShow");
+// 			setTimeout(function(){
+//                 $('.fancybox-wrap').css({
+//                     'position':'absolute'
+//                 });
+//                 $('.fancybox-inner').css('height','auto');
+//             },200);
+// 		},
+// 		beforeClose: function(){
+// 			$(".fancybox-wrap").removeClass("afterShow");
+// 			$(".fancybox-wrap").addClass("beforeClose");
+// 		},
+// 		afterClose: function(){
+// 			$(".fancybox-wrap").removeClass("beforeClose");
+// 			$(".fancybox-wrap").addClass("afterClose");
+// 		},
+//     }); 
+//     return false;
+// }
 
 var customHandlers = [];
 
@@ -179,7 +179,7 @@ $(document).ready(function(){
 					}
 				});
 			}
-			console.log(params);
+			// console.log(params);
   			$.ajax({
 			  	type: $(this).attr("method"),
 			  	url: $(this).attr("action"),
@@ -187,10 +187,12 @@ $(document).ready(function(){
 				success: function(msg){
 					var $form;
 					if( msg == "1" ){
-						$link = $this.find(".b-thanks-link");
+						$link = $(".b-thanks-link");
 					}else{
 						$link = $(".b-error-link");
 					}
+
+					console.log($link);
 
 					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
 						customHandlers[$this.attr("data-afterAjax")]($this);
