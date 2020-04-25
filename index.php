@@ -1,10 +1,19 @@
 <?
-	// $_GET["keywords"] = "Acura|MDx";
+	$carImages = array(
+		"Acura" => "i/Acura.jpg",
+	    "Acura|MDX" => "i/Acura-MDX.jpg",
+	    "Alfa Romeo" => "i/Alfa Romeo.jpg",
+	);
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
+	<script type="text/javascript">
+		var carImages = <?=json_encode($carImages)?>;
+	</script>
+
 	<title>Автобезопасность | Чип-тюнинг</title>
 	<meta name="keywords" content=''>
 	<meta name="description" content=''>
