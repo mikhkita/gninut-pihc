@@ -4,6 +4,28 @@
 	    "Acura|MDX" => "i/Acura-MDX.jpg",
 	    "Alfa Romeo" => "i/Alfa Romeo.jpg",
 	);
+
+	$mark = "";
+	$model = "";
+	if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
+		$arKeywords = explode("|", $_GET["keywords"]);
+		if(count($arKeywords) > 1){
+			$mark = $arKeywords[0];
+			$model = $arKeywords[1];
+		}else{
+			$mark = $arKeywords[0];
+		}
+	}
+
+	if(isset($_GET["keywords"]) && !empty($_GET["keywords"]) && isset($carImages[$_GET["keywords"]])){
+		$img = $carImages[$_GET["keywords"]];
+		$carName1 = $carName2 = $carName3 = $mark.($model ? (" ".$model) : ""); 
+	}else{
+		$img = "i/car.png";
+		$carName1 = "автомобиль";
+		$carName2 = "автомобиля";
+		$carName3 = "автомобиле";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +92,7 @@
 			</div>
 			<div class="b-1-main">
 				<div class="b-1-main-inner">
-					<h1>Сделайте ваш <span class="current-car">Cadillac</span> <br>мощнее на 10-30% <br>за 1 день!</h1>
+					<h1>Сделайте ваш <span class="current-car"><?=$carName1?></span> <br>мощнее на 10-30% <br>за 1 день!</h1>
 					<div class="b-1-main-text">Программный чип-тюнинг автомобиля раскроет заложенные производителем мощности автомобиля</div>
 					<div class="b-btn-cont">
 						<a href="#b-main-popup" class="b-btn fancy">
@@ -79,7 +101,7 @@
 						<div class="b-btn-info">это не займет много времени</div>
 					</div>
 				</div>
-				<div class="b-car" style="background-image: url('i/car.png');"></div>
+				<div class="b-car" style="background-image: url('<?echo $img;?>');"></div>
 			</div>
 			<a href="#" class="b-1-arrow b-go" data-block=".b-2">
 				<div class="b-1-arrow-text">Подробнее о чип-тюнинге</div>
@@ -89,7 +111,7 @@
 	</div>
 	<div class="b b-2">
 		<div class="b-block">
-			<h2>Ощутите <b>новые впечатления</b> от вождения вашего <span class="current-car">Cadillac</span></h2>
+			<h2>Ощутите <b>новые впечатления</b> от вождения вашего <span class="current-car"><?=$carName2?></span></h2>
 			<div class="b-2-list">
 				<div class="b-2-item">
 					<div class="b-2-item-img" style="background-image: url('i/b-2-1.svg');"></div>
@@ -113,7 +135,7 @@
 	<div class="b b-3">
 		<div class="b-3-car-cont">
 			<div class="b-block">
-				<div class="b-3-car" style="background-image: url('i/car.png');"></div>
+				<div class="b-3-car" style="background-image: url('<?echo $img;?>');"></div>
 				<div class="b-3-car-text"><b>Представьте</b>, что ваш автомобиль срывается с места, как только вы&nbsp;нажали на педаль газа…</div>
 			</div>
 		</div>
@@ -137,7 +159,7 @@
 	</div>
 	<div class="b b-4">
 		<div class="b-block">
-			<h3>Заводская программа на вашем <span class="current-car">Cadillac</span> <b>мешает&nbsp;использовать двигатель на полную мощность</b></h3>
+			<h3>Заводская программа на вашем <span class="current-car"><?=$carName3?></span> <b>мешает&nbsp;использовать двигатель на полную мощность</b></h3>
 			<div class="b-tab-block">
 				<h2><b>4 причины</b>, почему производители авто намеренно занижают мощность </h2>
 				<div class="b-tab-list">
@@ -213,19 +235,7 @@
 			</div>
 		</div>
 	</div>
-	<?
-		$mark = "";
-		$model = "";
-		if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
-			$arKeywords = explode("|", $_GET["keywords"]);
-			if(count($arKeywords) > 1){
-				$mark = $arKeywords[0];
-				$model = $arKeywords[1];
-			}else{
-				$mark = $arKeywords[0];
-			}
-		}
-	?>
+
 	<div class="b b-5" data-mark="<?if($mark) echo $mark;?>" data-model="<?if($model) echo $model;?>">
 		<div class="b-block">
 			<div class="b-5-top">
@@ -359,9 +369,9 @@
 	<div class="b b-7">
 		<div class="b-block">
 			<div class="b-7-left">
-				<h2>Попробуйте чип-тюнинг на&nbsp;ваш&nbsp;<span class="current-car">Cadillac </span><br><b>10 дней бесплатно!</b></h2>
+				<h2>Попробуйте чип-тюнинг на&nbsp;ваш&nbsp;<span class="current-car"><?=$carName1?></span><br><b>10 дней бесплатно!</b></h2>
 				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день без всяких заявлений!</h3>
-				<div class="b-7-car" style="background-image: url('i/car.png');"></div>
+				<div class="b-7-car" style="background-image: url('<?echo $img;?>');"></div>
 			</div>
 			<div class="b-7-right">
 				<form class="b-form-request" action="kitsend.php" method="POST">
@@ -588,7 +598,6 @@
 	<script src="js/slick.js"></script>
 	<script src="js/mask.js"></script>
 	<script src="js/KitSend.js"></script>
-	<script src="js/carImages.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
