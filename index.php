@@ -28,9 +28,15 @@
 		}
 	}
 
+	$carName1 = "";
+	$carName2 = "";
+	$carName3 = "";
 	if(isset($_GET["keywords"]) && !empty($_GET["keywords"]) && isset($carImages[$_GET["keywords"]])){
 		$img = $carImages[$_GET["keywords"]];
-		$carName1 = $carName2 = $carName3 = $mark.($model ? (" ".$model) : ""); 
+		$carName = $mark.($model ? (" ".$model) : "");
+		$carName1 = $carName;
+		$carName2 = $carName;
+		$carName3 = $carName;	
 	}else{
 		$img = "i/car.png";
 		$carName1 = "автомобиль";
