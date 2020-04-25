@@ -1,8 +1,19 @@
 <?
 	$carImages = array(
-		"Acura" => "i/Acura.jpg",
-	    "Acura|MDX" => "i/Acura-MDX.jpg",
-	    "Alfa Romeo" => "i/Alfa Romeo.jpg",
+		"Acura" => "i/Acura_rdx.png",
+	    "Acura|RDX" => "i/Acura_rdx.png",
+	    "Alfa Romeo" => "i/alfa_romeo_spider_8c.png",
+	    "Alfa Romeo|Spider" => "i/alfa_romeo_spider_8c.png",
+	    "Audi" => "i/Audi_A4.png",
+	    "Audi|A4" => "i/Audi_A4.png",
+	    "Bentley" => "i/bentley_continental_gt.png",
+	    "Bentley|Continental" => "i/bentley_continental_gt.png",
+	    "BMW" => "i/bmw_5_series.png",
+	    "BMW|5-series" => "i/bmw_5_series.png",
+	    "Cadillac" => "i/bmw_5_series.png",
+	    "Cadillac|Escalade" => "i/cadillac_escalade.png",
+
+
 	);
 
 	$mark = "";
