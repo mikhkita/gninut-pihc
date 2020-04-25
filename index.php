@@ -573,10 +573,10 @@
 					</div>
 					<div class="b-input-string-checkbox">
 						<div class="b-checkbox">
-							<input id="politics" name="politics" type="checkbox" value="politics" required checked>
-							<label for="politics" class="checkbox">
+							<input id="politics-1" name="politics" type="checkbox" value="politics" required checked>
+							<label for="politics-1" class="checkbox">
 								<span class="icon-checkbox"></span>
-								Я принимаю <a href="dashed">условия передачи информации</a>
+								Я принимаю <a href="#" class="dashed">условия передачи информации</a>
 							</label>
 						</div>
 					</div>
@@ -697,10 +697,10 @@
 				</div>
 				<div class="b-input-string-checkbox">
 					<div class="b-checkbox">
-						<input id="politics" name="politics" type="checkbox" value="politics" required checked>
-						<label for="politics" class="checkbox">
+						<input id="politics-2" name="politics" type="checkbox" value="politics" required checked>
+						<label for="politics-2" class="checkbox">
 							<span class="icon-checkbox"></span>
-							Я принимаю <a href="dashed">условия передачи информации</a>
+							Я принимаю <a href="#" class="dashed">условия передачи информации</a>
 						</label>
 					</div>
 				</div>
@@ -728,10 +728,10 @@
 				</div>
 				<div class="b-input-string-checkbox">
 					<div class="b-checkbox">
-						<input id="politics" name="politics" type="checkbox" value="politics" required checked>
-						<label for="politics" class="checkbox">
+						<input id="politics-3" name="politics" type="checkbox" value="politics" required checked>
+						<label for="politics-3" class="checkbox">
 							<span class="icon-checkbox"></span>
-							Я принимаю <a href="dashed">условия передачи информации</a>
+							Я принимаю <a href="#" class="dashed">условия передачи информации</a>
 						</label>
 					</div>
 				</div>
