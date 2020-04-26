@@ -377,7 +377,7 @@ $(document).ready(function(){
             }
             changeCarImages($(this).val());
         }
-        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-mark' : '.b-form-calc-power .b-select-mark', $(this).val());
+        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-mark' : '.b-select-mark', $(this).val());
     });
 
     $(document).on('change', '.b-select-model', function(){
@@ -397,12 +397,12 @@ $(document).ready(function(){
             }
             changeCarImages($form.find('.b-select-mark').val(), $(this).val());
         }
-        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-model' : '.b-form-calc-power .b-select-model', $(this).val());
+        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-model' : '.b-select-model', $(this).val());
     });
 
     $(document).on('change', '.b-select-engine', function(){
         var $form = $(this).parents("form");
-        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-engine' : '.b-form-calc-power .b-select-engine', $(this).val());
+        changeOtherSelect($form.hasClass('b-form-calc-power') ? '.b-form-request .b-select-engine' : '.b-select-engine', $(this).val());
     });
 
     $(document).on('click', '.b-btn-calc-power', function(){
