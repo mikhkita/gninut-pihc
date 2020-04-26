@@ -150,8 +150,8 @@
 	    "SsangYong|Action" => "i/ssang_yong_action.png",
 	    "SsangYong|Action Sport" => "i/ssang_yong_action.png",
 
-	    "Subaru" => "i/subaru-impreza.png",
-	    "Subaru|Impreza" => "i/subaru-impreza.png",
+	    "Subaru" => "i/subaru_impreza.png",
+	    "Subaru|Impreza" => "i/subaru_impreza.png",
 
 	    "Suzuki" => "i/suzuki_grand_vitara.png",
 	    "Suzuki|Grand Vitara" => "i/suzuki_grand_vitara.png",
