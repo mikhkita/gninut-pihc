@@ -176,10 +176,23 @@
 		}
 	}
 
+	function findCar($value){
+		global $carImages;
+		global $mark;
+		$carImagesLower = array_change_key_case($carImages);
+		if(isset($carImagesLower[$value])){
+			return isset($carImagesLower[mb_strtolower($value)]);
+		}else if($mark){
+			return isset($carImagesLower[mb_strtolower($mark)]);
+		}else{
+			return false;
+		}
+	}
+
 	$carName1 = "";
 	$carName2 = "";
 	$carName3 = "";
-	if(isset($_GET["keywords"]) && !empty($_GET["keywords"]) && isset($carImages[$_GET["keywords"]])){
+	if(isset($_GET["keywords"]) && !empty($_GET["keywords"]) && findCar($_GET["keywords"])){
 		$img = $carImages[$_GET["keywords"]];
 		$carName = $mark.($model ? (" ".$model) : "");
 		$carName1 = $carName;
