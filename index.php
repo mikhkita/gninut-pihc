@@ -21,8 +21,8 @@
 	    "Cadillac" => "i/cadillac_escalade.png",
 	    "Cadillac|Escalade" => "i/cadillac_escalade.png",
 
-	    "Cherry" => "i/chery_tiggo.png",
-	    "Cherry|Tiggo" => "i/chery_tiggo.png",
+	    "Chery" => "i/chery_tiggo.png",
+	    "Chery|Tiggo" => "i/chery_tiggo.png",
 
 	    "Chevrolet" => "i/chevrolet_cruze.png",
 	    "Chevrolet|Cruze" => "i/chevrolet_cruze.png",
