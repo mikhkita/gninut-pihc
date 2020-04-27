@@ -285,6 +285,8 @@ $(document).ready(function(){
 
     // ===========
 
+    var carsLoad = false;
+
     function findElementCar(targetKey, obj, returnKey) {
         returnKey = returnKey || false;
         targetKey = targetKey.toLowerCase();
@@ -328,7 +330,9 @@ $(document).ready(function(){
             $($carSelectors).css('background-image', 'url("'+carImages[mark]+'")');
         }
 
-        $('.current-car').text(mark + ((model) ? " "+model : ""));
+        if(carsLoad){
+            $('.current-car').text(mark + ((model) ? " "+model : ""));
+        }
     }
 
     var arCars = {};
@@ -355,6 +359,7 @@ $(document).ready(function(){
                     }
                 }
             }
+            carsLoad = true;
             //console.log(arCars);
         },
     });
