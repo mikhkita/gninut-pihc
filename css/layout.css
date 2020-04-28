@@ -1794,18 +1794,19 @@ input:-moz-placeholder {
 			line-height: 32px;
 		}
 		.b-7-car{
-		    width: 720px;
-    		height: 421px;
-			margin-left: -65px;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			-webkit-transform: scale(-1, 1);
-			-ms-transform: scale(-1, 1);
-			-o-transform: scale(-1, 1);
-			transform: scale(-1, 1);
-			top: -69px;
-			left: -144px;
+		    width: 730px;
+		    height: 548px;
+		    margin-left: -65px;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    -webkit-transform: scale(-1, 1);
+		    -ms-transform: scale(-1, 1);
+		    -o-transform: scale(-1, 1);
+		    transform: scale(-1, 1);
+		    top: -50px;
+		    left: 0px;
+		    position: relative;
 		}
 	.b-7-right{
 		display: inline-block;
