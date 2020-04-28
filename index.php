@@ -1,4 +1,5 @@
 <?
+	$cars = file_get_contents('storage/cars.json');
 	$carImages = array(
 		"Acura" => "i/Acura_rdx.png",
 	    "Acura|RDX" => "i/Acura_rdx.png",
@@ -174,37 +175,59 @@
 	$mark = "";
 	$model = "";
 	if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
-		$arKeywords = explode("|", $_GET["keywords"]);
-		if(count($arKeywords) > 1){
-			$mark = $arKeywords[0];
-			$model = $arKeywords[1];
-		}else{
-			$mark = $arKeywords[0];
+		$arCars = json_decode($cars, true);
+		foreach ($arCars as $_mark => $_models) {
+			if(preg_match("/".$_mark."/iu", $_GET["keywords"])){
+				$mark = $_mark;
+				foreach ($_models as $_model => $value) {
+					if(preg_match("/".$_model."/iu", $_GET["keywords"])){
+						$model = $_model;
+					}
+				}
+				break;
+			}
 		}
 	}
 
-	function findCar($value){
+	function findCarImage($mark, $model = false){
 		global $carImages;
-		global $mark;
 		$carImagesLower = array_change_key_case($carImages);
-		if(isset($carImagesLower[$value])){
-			return isset($carImagesLower[mb_strtolower($value)]);
-		}else if($mark){
-			return isset($carImagesLower[mb_strtolower($mark)]);
+		$img = "i/car.png";
+		if($mark && $model){
+			$res = $carImagesLower[mb_strtolower($mark."|".$model)];
+			if($res){
+				$img = $res;
+			}else{
+				$res = $carImagesLower[mb_strtolower($mark)];
+				if($res){
+					$img = $res;
+				}
+			}
 		}else{
-			return false;
+			$res = $carImagesLower[mb_strtolower($mark)];
+			if($res){
+				$img = $res;
+			}
 		}
+		return $img;
 	}
 
 	$carName1 = "";
 	$carName2 = "";
 	$carName3 = "";
-	if(isset($_GET["keywords"]) && !empty($_GET["keywords"]) && findCar($_GET["keywords"])){
-		$img = $carImages[$_GET["keywords"]];
-		$carName = $mark.($model ? (" ".$model) : "");
+	$img = "";
+	if($mark && $model){
+		$img = findCarImage($mark, $model);
+		$carName = $mark." ".$model;
 		$carName1 = $carName;
 		$carName2 = $carName;
-		$carName3 = $carName;	
+		$carName3 = $carName;
+	}elseif($mark){
+		$img = findCarImage($mark);
+		$carName = $mark;
+		$carName1 = $carName;
+		$carName2 = $carName;
+		$carName3 = $carName;
 	}else{
 		$img = "i/car.png";
 		$carName1 = "автомобиль";
@@ -219,6 +242,7 @@
 
 	<script type="text/javascript">
 		var carImages = <?=json_encode($carImages)?>;
+		var arCars = <?=$cars?>;
 	</script>
 
 	<title>Автобезопасность | Чип-тюнинг</title>
