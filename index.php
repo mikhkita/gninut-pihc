@@ -10,6 +10,8 @@
 	    "Audi" => "i/Audi_A4.png",
 	    "Audi|A4" => "i/Audi_A4.png",
 	    "Audi|A 4" => "i/Audi_A4.png",
+	    "Audi|A6" => "i/Audi_a6.png",
+	    "Audi|A 6" => "i/Audi_a6.png",
 
 	    "Bentley" => "i/bentley_continental_gt.png",
 	    "Bentley|Continental" => "i/bentley_continental_gt.png",
@@ -18,6 +20,11 @@
 	    "BMW|5-series" => "i/bmw_5_series.png",
 	    "BMW|5" => "i/bmw_5_series.png",
 	    "BMW|5 series" => "i/bmw_5_series.png",
+	    "BMW|3-series" => "i/bmw_3.png",
+	    "BMW|3" => "i/bmw_3.png",
+	    "BMW|3 series" => "i/bmw_3.png",
+	    "BMW|X5" => "i/bmw_x5.png",
+	    "BMW|X 5" => "i/bmw_x5.png",
 
 	    "Cadillac" => "i/cadillac_escalade.png",
 	    "Cadillac|Escalade" => "i/cadillac_escalade.png",
@@ -40,6 +47,7 @@
 
 	    "Ford" => "i/ford_kuga.png",
 	    "Ford|Kuga" => "i/ford_kuga.png",
+	    "Ford|Mondeo" => "i/ford_mondeo.png",
 
 	    "Ferrari" => "i/Ferrari_430.png",
 	    "Ferrari|F430" => "i/Ferrari_430.png",
@@ -50,12 +58,17 @@
 
 	    "Honda" => "i/Civic_FD.png",
 	    "Honda|Civic" => "i/Civic_FD.png",
+	    "Honda|Accord" => "i/honda_accord.png",
+	    "Honda|CR-V" => "i/honda_crv.png",
+	    "Honda|CRV" => "i/honda_crv.png",
+	    "Honda|CR V" => "i/honda_crv.png",
 
 	    "Hummer" => "i/hummer_h2.png",
 	    "Hummer|h2" => "i/hummer_h2.png",
 
 	    "Huyndai" => "i/huyndai_avante.png",
 	    "Huyndai|Avante" => "i/huyndai_avante.png",
+	    "Huyndai|Sonata" => "i/huyndai_sonata.png",
 
 	    "Infiniti" => "i/infiniti_qx_60.png",
 	    "Infiniti|QX 60" => "i/infiniti_qx_60.png",
@@ -75,6 +88,10 @@
 
 	    "Kia" => "i/kia_sportage.png",
 	    "Kia|Sportage" => "i/kia_sportage.png",
+	    "Kia|Ceed" => "i/kia_ceed.png",
+	    "Kia|Cee'd" => "i/kia_ceed.png",
+	    "Kia|Rio" => "i/kia_rio.png",
+	    "Kia|Soul" => "i/kia_soul.png",
 
 	    "Lancia" => "i/lancia_y.png",
 	    "Lancia|Y" => "i/lancia_y.png",
@@ -91,6 +108,7 @@
 
 	    "Mazda" => "i/Mazda3.png",
 	    "Mazda|3" => "i/Mazda3.png",
+	    "Mazda|6" => "i/Mazda_6.png",
 
 	    "Mercedes" => "i/mercedes_e_class.png",
 	    "Mercedes|E-class" => "i/mercedes_e_class.png",
@@ -109,10 +127,12 @@
 
 	    "Nissan" => "i/nissan_qashqai.png",
 	    "Nissan|Qashqai" => "i/nissan_qashqai.png",
+	    "Nissan|Juke" => "i/nissan_juke.png",
 
 
 	    "Opel" => "i/opel_astra.png",
 	    "Opel|Astra" => "i/opel_astra.png",
+	    "Opel|Corsa" => "i/opel_corsa.png",
 
 
 	    "Peugeot" => "i/peugeot_3008.png",
@@ -125,6 +145,7 @@
 
 	    "Renault" => "i/renault_megane.png",
 	    "Renault|Megane" => "i/renault_megane.png",
+	    "Renault|Logan" => "i/renault_logan.png",
 
 
 	    "Saab" => "i/saab_9_3.png",
@@ -138,6 +159,7 @@
 
 	    "Skoda" => "i/skoda_octavia.png",
 	    "Skoda|Octavia" => "i/skoda_octavia.png",
+	    "Skoda|Fabia" => "i/skoda_fabia.png",
 
 	    "Smart" => "i/smart_fortwo.png",
 	    "Smart|Fortwo" => "i/smart_fortwo.png",
@@ -163,13 +185,23 @@
 
 	    "Toyota" => "i/Camry_XV40.png.png",
 	    "Toyota|Camry" => "i/Camry_XV40.png.png",
+	    "Toyota|Corolla" => "i/toyota_corolla.png",
+	    "Toyota|Land Cruiser" => "i/toyota_land_druiser_200.png",
+	    "Toyota|LandCruiser" => "i/toyota_land_druiser_200.png",
+	    "Toyota|Land Cruiser 200" => "i/toyota_land_druiser_200.png",
+	    "Toyota|LandCruiser 200" => "i/toyota_land_druiser_200.png",
 
-	    "Volvo" => "i/volvo_xc_90.png",
-	    "Volvo|XC90" => "i/volvo_xc_90.png",
-	    "Volvo|XC 90" => "i/volvo_xc_90.png",
+	    "Volvo" => "i/volvo_xc_70.png",
+	    "Volvo|XC70" => "i/volvo_xc_70.png",
+	    "Volvo|XC 70" => "i/volvo_xc_70.png",
 
 	    "Volkswagen" => "i/vw golf.png",
-	    "Volkswagen|Golf" => "i/vw golf.png"
+	    "Volkswagen|Golf" => "i/vw golf.png",
+	    "Volkswagen|Passat" => "i/vw_passat.png",
+	    "Volkswagen|Polo" => "i/vw_polo.png",
+	    "Volkswagen|Polo Sedan" => "i/vw_polo.png",
+	    "Volkswagen|Touareg" => "i/vw_touareg.png",
+	    "Volkswagen|Tuareg" => "i/vw_touareg.png"
 	);
 
 	$mark = "";
