@@ -336,9 +336,29 @@
 				<div class="b-3-item" style="background-image: url('i/b-3-4.png');"></div>
 				<div class="b-3-item" style="background-image: url('i/b-3-5.png');"></div>
 				<div class="b-3-item" style="background-image: url('i/b-3-6.png');"></div>
-				<div class="b-3-item" style="background-image: url('i/b-3-1.png');"></div>
-				<div class="b-3-item" style="background-image: url('i/b-3-2.png');"></div>
-				<div class="b-3-item" style="background-image: url('i/b-3-3.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/chevrolet.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/porsche.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/mazda.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/kia.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/subaru.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/ford.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/volkswagen.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/alfa.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/chery.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/citroen.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/ferrari.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/fiat.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/hyundai.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/infiniti.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/lexus.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/mini.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/nissan.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/opel.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/peugeot.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/renault.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/skoda.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/suzuki.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/volvo.png');"></div>
 			</div>
 		</div>
 	</div>
