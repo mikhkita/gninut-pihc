@@ -40,6 +40,10 @@
 	    "Ford" => "i/ford_kuga.png",
 	    "Ford|Kuga" => "i/ford_kuga.png",
 
+	    "Ferrari" => "i/Ferrari_430.png",
+	    "Ferrari|F430" => "i/Ferrari_430.png",
+	    "Ferrari|430" => "i/Ferrari_430.png",
+
 	    "GMC" => "i/gmc_yukon.png",
 	    "GMC|Yukon" => "i/gmc_yukon.png",
 
@@ -155,6 +159,9 @@
 
 	    "Suzuki" => "i/suzuki_grand_vitara.png",
 	    "Suzuki|Grand Vitara" => "i/suzuki_grand_vitara.png",
+
+	    "Toyota" => "i/Camry_XV40.png.png",
+	    "Toyota|Camry" => "i/Camry_XV40.png.png",
 
 	    "Volvo" => "i/volvo_xc_90.png",
 	    "Volvo|XC90" => "i/volvo_xc_90.png",
