@@ -1,4 +1,5 @@
 <?
+	$cars = file_get_contents('storage/cars.json');
 	$carImages = array(
 		"Acura" => "i/Acura_rdx.png",
 	    "Acura|RDX" => "i/Acura_rdx.png",
@@ -39,6 +40,10 @@
 
 	    "Ford" => "i/ford_kuga.png",
 	    "Ford|Kuga" => "i/ford_kuga.png",
+
+	    "Ferrari" => "i/Ferrari_430.png",
+	    "Ferrari|F430" => "i/Ferrari_430.png",
+	    "Ferrari|430" => "i/Ferrari_430.png",
 
 	    "GMC" => "i/gmc_yukon.png",
 	    "GMC|Yukon" => "i/gmc_yukon.png",
@@ -156,6 +161,9 @@
 	    "Suzuki" => "i/suzuki_grand_vitara.png",
 	    "Suzuki|Grand Vitara" => "i/suzuki_grand_vitara.png",
 
+	    "Toyota" => "i/Camry_XV40.png.png",
+	    "Toyota|Camry" => "i/Camry_XV40.png.png",
+
 	    "Volvo" => "i/volvo_xc_90.png",
 	    "Volvo|XC90" => "i/volvo_xc_90.png",
 	    "Volvo|XC 90" => "i/volvo_xc_90.png",
@@ -167,37 +175,59 @@
 	$mark = "";
 	$model = "";
 	if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
-		$arKeywords = explode("|", $_GET["keywords"]);
-		if(count($arKeywords) > 1){
-			$mark = $arKeywords[0];
-			$model = $arKeywords[1];
-		}else{
-			$mark = $arKeywords[0];
+		$arCars = json_decode($cars, true);
+		foreach ($arCars as $_mark => $_models) {
+			if(preg_match("/".$_mark."/iu", $_GET["keywords"])){
+				$mark = $_mark;
+				foreach ($_models as $_model => $value) {
+					if(preg_match("/".$_model."/iu", $_GET["keywords"])){
+						$model = $_model;
+					}
+				}
+				break;
+			}
 		}
 	}
 
-	function findCar($value){
+	function findCarImage($mark, $model = false){
 		global $carImages;
-		global $mark;
 		$carImagesLower = array_change_key_case($carImages);
-		if(isset($carImagesLower[$value])){
-			return isset($carImagesLower[mb_strtolower($value)]);
-		}else if($mark){
-			return isset($carImagesLower[mb_strtolower($mark)]);
+		$img = "i/car.png";
+		if($mark && $model){
+			$res = $carImagesLower[mb_strtolower($mark."|".$model)];
+			if($res){
+				$img = $res;
+			}else{
+				$res = $carImagesLower[mb_strtolower($mark)];
+				if($res){
+					$img = $res;
+				}
+			}
 		}else{
-			return false;
+			$res = $carImagesLower[mb_strtolower($mark)];
+			if($res){
+				$img = $res;
+			}
 		}
+		return $img;
 	}
 
 	$carName1 = "";
 	$carName2 = "";
 	$carName3 = "";
-	if(isset($_GET["keywords"]) && !empty($_GET["keywords"]) && findCar($_GET["keywords"])){
-		$img = $carImages[$_GET["keywords"]];
-		$carName = $mark.($model ? (" ".$model) : "");
+	$img = "";
+	if($mark && $model){
+		$img = findCarImage($mark, $model);
+		$carName = $mark." ".$model;
 		$carName1 = $carName;
 		$carName2 = $carName;
-		$carName3 = $carName;	
+		$carName3 = $carName;
+	}elseif($mark){
+		$img = findCarImage($mark);
+		$carName = $mark;
+		$carName1 = $carName;
+		$carName2 = $carName;
+		$carName3 = $carName;
 	}else{
 		$img = "i/car.png";
 		$carName1 = "автомобиль";
@@ -212,6 +242,7 @@
 
 	<script type="text/javascript">
 		var carImages = <?=json_encode($carImages)?>;
+		var arCars = <?=$cars?>;
 	</script>
 
 	<title>Автобезопасность | Чип-тюнинг</title>
@@ -329,9 +360,29 @@
 				<div class="b-3-item" style="background-image: url('i/b-3-4.png');"></div>
 				<div class="b-3-item" style="background-image: url('i/b-3-5.png');"></div>
 				<div class="b-3-item" style="background-image: url('i/b-3-6.png');"></div>
-				<div class="b-3-item" style="background-image: url('i/b-3-1.png');"></div>
-				<div class="b-3-item" style="background-image: url('i/b-3-2.png');"></div>
-				<div class="b-3-item" style="background-image: url('i/b-3-3.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/chevrolet.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/porsche.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/mazda.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/kia.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/subaru.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/ford.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/volkswagen.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/alfa.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/chery.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/citroen.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/ferrari.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/fiat.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/hyundai.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/infiniti.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/lexus.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/mini.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/nissan.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/opel.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/peugeot.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/renault.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/skoda.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/suzuki.png');"></div>
+				<div class="b-3-item" style="background-image: url('i/logos/volvo.png');"></div>
 			</div>
 		</div>
 	</div>

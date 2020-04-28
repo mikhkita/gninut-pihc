@@ -285,8 +285,6 @@ $(document).ready(function(){
 
     // ===========
 
-    var carsLoad = false;
-
     function findElementCar(targetKey, obj, returnKey) {
         returnKey = returnKey || false;
         targetKey = targetKey.toLowerCase();
@@ -330,39 +328,9 @@ $(document).ready(function(){
             $($carSelectors).css('background-image', 'url("'+carImages[mark]+'")');
         }
 
-        if(carsLoad){
-            $('.current-car').text(mark + ((model) ? " "+model : ""));
-        }
+        $('.current-car').text(mark + ((model) ? " "+model : ""));
+
     }
-
-    var arCars = {};
-    $.ajax({
-        type: "GET",
-        url: "./storage/cars.json",
-        success: function(res){
-            arCars = res;
-            for (mark in arCars) {
-                if(mark){
-                    $('.b-select-mark').append('<option value="' + mark + '">' + mark + '</option>');
-                }
-            }
-            if($('.b-5').attr("data-mark")){
-                var targetMark = findElementCar($('.b-5').attr("data-mark"), arCars, true);
-                if(targetMark){
-                    $('.b-select-mark').val(targetMark).change();
-
-                    if($('.b-5').attr("data-model")){
-                        var targetModel = findElementCar($('.b-5').attr("data-model"), arCars[targetMark], true);
-                        if(targetModel){
-                            $('.b-select-model').val(targetModel).change();
-                        }
-                    }
-                }
-            }
-            carsLoad = true;
-            //console.log(arCars);
-        },
-    });
 
     var $calcForm = $('.b-form-calc-power').validate({errorElement : "span"});
 
@@ -429,6 +397,26 @@ $(document).ready(function(){
         
         return false;
     });
+
+    if(typeof arCars !== undefined){
+        for (mark in arCars) {
+            if(mark){
+                $('.b-select-mark').append('<option value="' + mark + '">' + mark + '</option>');
+            }
+        }
+        if($('.b-5').attr("data-mark")){
+            var targetMark = findElementCar($('.b-5').attr("data-mark"), arCars, true);
+            if(targetMark){
+                $('.b-select-mark').val(targetMark).change();
+                if($('.b-5').attr("data-model")){
+                    var targetModel = findElementCar($('.b-5').attr("data-model"), arCars[targetMark], true);
+                    if(targetModel){
+                        $('.b-select-model').val(targetModel).change();
+                    }
+                }
+            }
+        }
+    }
 
     bindFancy();
 
