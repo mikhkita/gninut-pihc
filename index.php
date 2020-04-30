@@ -29,6 +29,8 @@
 	    "Cadillac" => "i/cadillac_escalade.png",
 	    "Cadillac|Escalade" => "i/cadillac_escalade.png",
 
+	    "Citroen" => "i/citroen.png",
+
 	    "Chery" => "i/chery_tiggo.png",
 	    "Chery|Tiggo" => "i/chery_tiggo.png",
 
@@ -52,6 +54,8 @@
 	    "Ferrari" => "i/Ferrari_430.png",
 	    "Ferrari|F430" => "i/Ferrari_430.png",
 	    "Ferrari|430" => "i/Ferrari_430.png",
+
+	    "Geely" => "i/geely.png",
 
 	    "GMC" => "i/gmc_yukon.png",
 	    "GMC|Yukon" => "i/gmc_yukon.png",
