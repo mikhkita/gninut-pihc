@@ -454,7 +454,7 @@
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/1.svg');"></div>
 										<div class="b-tab-slider-left-top-text">Маркетинговая политика</div>
 									</div>
-									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
+									<div class="b-tab-slider-left-text">Автопроизводитель намеренно занижает характеристики машины чтобы сократить необходимость выпуска большого количества различных двигателей.</div>
 								</div>
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-1.jpg');"></div>
 							</div>
@@ -466,7 +466,7 @@
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/2.svg');"></div>
 										<div class="b-tab-slider-left-top-text">Налоговые ограничения</div>
 									</div>
-									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
+									<div class="b-tab-slider-left-text">Нередко мощность автомобиля напрямую влияет на налоги, таможенные пошлины и страховые премии. Это одна из причин, почему автопроизводитель искусственно занижает мощность.</div>
 								</div>
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-1.jpg');"></div>
 							</div>
@@ -490,7 +490,7 @@
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/4.svg');"></div>
 										<div class="b-tab-slider-left-top-text">Увеличение ассортимента</div>
 									</div>
-									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
+									<div class="b-tab-slider-left-text">Разные программы управления на одном и том же двигателе – не редкость для новых автомобилей. Таким образом производитель увеличивает ассортимент своей продукции.</div>
 								</div>
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-1.jpg');"></div>
 							</div>
@@ -583,9 +583,9 @@
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/1.svg');"></div>
-										<div class="b-tab-slider-left-top-text">Чип-тюнинг<br>двигателя и АКПП</div>
+										<div class="b-tab-slider-left-top-text">Чип-тюнинг<br>двигателя и&nbsp;АКПП</div>
 									</div>
-									<div class="b-tab-slider-left-text">Клапан ЕГР устанавливаются на двигатель, чтобы снизить выбросы оксидов азота (NOx).  Отработанные выхлопные газы отправляются повторно догорать в ДВС. Отключение клапана ЕГР приводит к экономии топлива и увеличению ресурса двигателя.</div>
+									<div class="b-tab-slider-left-text">С помощью чип-тюнинга вы можете увеличить мощность вашего автомобиля, снизив расход при той же манере вождения. Время отклика на педаль газа сократится, а быстродействие вашей АКПП повысится</div>
 								</div>
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-2.jpg');"></div>
 							</div>
@@ -597,7 +597,7 @@
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/2.svg');"></div>
 										<div class="b-tab-slider-left-top-text">Удаление катализатора</div>
 									</div>
-									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
+									<div class="b-tab-slider-left-text">Катализатор предназначен для обезвреживания опасных веществ, входящих в состав отработанных газов. При его неисправности возможно возникновение явного запаха серы, снижение эффективности и появление ошибок, появление противодавления и позднего угла зажигания.</div>
 								</div>
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-2.jpg');"></div>
 							</div>
@@ -621,7 +621,7 @@
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/4.svg');"></div>
 										<div class="b-tab-slider-left-top-text">Отключение<br>сажевого фильтра</div>
 									</div>
-									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
+									<div class="b-tab-slider-left-text">Сажевый фильтр устанавливается для снижения твердых частиц в выхлопных газах. Со временем он забивается, что приводит к снижению мощности, неровной работе на холостом ходу, увеличению расхода топлива и другим неприятностям.</div>
 								</div>
 								<div class="b-tab-slider-right" style="background-image: url('i/slider-2.jpg');"></div>
 							</div>
