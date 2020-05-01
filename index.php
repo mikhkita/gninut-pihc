@@ -187,8 +187,8 @@
 	    "Suzuki" => "i/suzuki_grand_vitara.png",
 	    "Suzuki|Grand Vitara" => "i/suzuki_grand_vitara.png",
 
-	    "Toyota" => "i/Camry_XV40.png.png",
-	    "Toyota|Camry" => "i/Camry_XV40.png.png",
+	    "Toyota" => "i/Camry_XV40.png",
+	    "Toyota|Camry" => "i/Camry_XV40.png",
 	    "Toyota|Corolla" => "i/toyota_corolla.png",
 	    "Toyota|Land Cruiser" => "i/toyota_land_druiser_200.png",
 	    "Toyota|LandCruiser" => "i/toyota_land_druiser_200.png",
