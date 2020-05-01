@@ -386,7 +386,7 @@
 	<div class="b b-3">
 		<div class="b-3-car-cont">
 			<div class="b-block">
-				<div class="b-3-car" style="background-image: url('<?$img[1];?>');"></div>
+				<div class="b-3-car" style="background-image: url('<?=$img[1];?>');"></div>
 				<div class="b-3-car-text"><b>Представьте</b>, что ваш автомобиль срывается с места, как только вы&nbsp;нажали на педаль газа…</div>
 			</div>
 		</div>
@@ -642,7 +642,7 @@
 			<div class="b-7-left">
 				<h2>Попробуйте чип-тюнинг на&nbsp;ваш&nbsp;<span class="current-car"><?=$carName1?></span><br><b>10 дней бесплатно!</b></h2>
 				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день без всяких заявлений!</h3>
-				<div class="b-7-car" style="background-image: url('<?$img[1];?>');"></div>
+				<div class="b-7-car" style="background-image: url('<?=$img[1];?>');"></div>
 			</div>
 			<div class="b-7-right">
 				<form class="b-form-request" action="kitsend.php" method="POST">

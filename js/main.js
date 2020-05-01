@@ -352,7 +352,7 @@ $(document).ready(function(){
             if (typeof carImages[mark][1] == 'undefined') {
                 carImages[mark][1] = carImages[mark][0];
             }
-            
+
             $('.b-car').css('background-image', 'url("'+carImages[mark][0]+'")');
             $('.b-3-car').css('background-image', 'url("'+carImages[mark][1]+'")');
             $('.b-7-car').css('background-image', 'url("'+carImages[mark][1]+'")');
