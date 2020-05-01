@@ -173,6 +173,10 @@ $(document).ready(function(){
             var bottom = slick.listHeight - slick.$slides.eq(nextSlide).height() + 21;
         }
 
+        if (bottom > 200) {
+            bottom = '101';
+        }
+
         slick.$slider.parents('.b-tab-block').find('.slick-arrow').css('bottom', bottom);
         tabs.removeClass('active');
         tabs.eq(nextSlide).addClass("active");
