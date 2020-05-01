@@ -1780,6 +1780,8 @@ input:-moz-placeholder {
 		margin-top: 5px;
 		width: calc(100% - 525px);
 		margin-right: 73px;
+		position: relative;
+		z-index: 1;
 	}
 		.b-7-left h2{
 			text-align: left;
@@ -1978,9 +1980,16 @@ input:-moz-placeholder {
 /*************   b-8   *************/
 
 .b-8{
+	background-image: url(../i/b-8-back.png);
+    background-size: 100% 100%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
 	padding-bottom: 100px;
+	margin-top: -418px;
+	padding-top: 261px;
 }
 	.b-8 h2{
+		color: #fff;
 		margin-bottom: 70px;
 	}
 	.b-faq-block{
@@ -2044,6 +2053,13 @@ input:-moz-placeholder {
 					color: #282828;
 					line-height: 32px;
 				}
+				.b-faq-item ul{
+					margin: 10px 0;
+					font-family: 'ProximaNova-Regular';
+					font-size: 20px;
+					color: #282828;
+					line-height: 32px;
+				}
 			.b-faq-item.active{
 				display: block;
 			}
@@ -2065,8 +2081,11 @@ input:-moz-placeholder {
 		background-position: center;
 		background-repeat: no-repeat;
 		padding-bottom: 72px;
+		padding-top: 0;
+		margin-top: 0;
 	}
 	.b-8 h2{
+		color: #282828;
 		margin-bottom: 40px;
 	}
 		.b-faq-block{

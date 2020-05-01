@@ -127,6 +127,10 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
+    $(".b-tab-slider-list").on('init', function(event, slick){
+        setSliderArrowPosition(slick);
+    });
+
     $(document).find(".b-tab-slider-list").each(function(){
         $(this).slick({
             dots: false,
@@ -164,20 +168,21 @@ $(document).ready(function(){
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
     // // Кастомные переключатели (тумблеры)
-    $(".b-tab-slider-list").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        var tabs = slick.$slider.parents('.b-tab-block').find('.b-tab-item');
-        
-        if (isMobile) {
-            var bottom = slick.listHeight - slick.$slides.eq(nextSlide).height();
-        } else {
-            var bottom = slick.listHeight - slick.$slides.eq(nextSlide).height() + 21;
-        }
 
-        if (bottom > 200) {
-            bottom = '101';
+    function setSliderArrowPosition(slick, nextSlide = 0){
+        var tabs = slick.$slider.parents('.b-tab-block').find('.b-tab-item');
+        if (isMobile) {
+            var bottom = slick.$slider.height() - slick.$slides.eq(nextSlide).height();
+        } else {
+            var bottom = slick.$slider.height() - slick.$slides.eq(nextSlide).height() + 21;
         }
 
         slick.$slider.parents('.b-tab-block').find('.slick-arrow').css('bottom', bottom);
+    }
+
+    $(".b-tab-slider-list").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var tabs = slick.$slider.parents('.b-tab-block').find('.b-tab-item');
+        setSliderArrowPosition(slick, nextSlide)
         tabs.removeClass('active');
         tabs.eq(nextSlide).addClass("active");
     });
