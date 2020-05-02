@@ -50,11 +50,11 @@
 	    "Dodge" => array("i/dodge_caliber.png"),
 	    "Dodge|Caliber" => array("i/dodge_caliber.png"),
 
-	    "Fiat" => array("i/fiat_500.png"),
-	    "Fiat|500" => array("i/fiat_500.png"),
+	    "Fiat" => array("i/fiat_500.png", "i/fiat_500_1.png"),
+	    "Fiat|500" => array("i/fiat_500.png", "i/fiat_500_1.png"),
 
-	    "Ford" => array("i/ford_kuga.png"),
-	    "Ford|Kuga" => array("i/ford_kuga.png"),
+	    "Ford" => array("i/ford_kuga.png", "i/ford_kuga_1.png"),
+	    "Ford|Kuga" => array("i/ford_kuga.png", "i/ford_kuga_1.png"),
 	    "Ford|Mondeo" => array("i/ford_mondeo.png"),
 
 	    "Ferrari" => array("i/Ferrari_430.png"),
@@ -63,8 +63,8 @@
 
 	    "Geely" => array("i/geely.png"),
 
-	    "GMC" => array("i/gmc_yukon.png"),
-	    "GMC|Yukon" => array("i/gmc_yukon.png"),
+	    "GMC" => array("i/gmc_yukon.png", "i/gmc_yukon_1.png"),
+	    "GMC|Yukon" => array("i/gmc_yukon.png", "i/gmc_yukon_1.png"),
 
 	    "Great" => array("i/great_wall.png"),
 
@@ -91,10 +91,10 @@
 		"Infiniti|QX60" => array("i/infiniti_qx_60.png"),
 		"Infiniti|QX" => array("i/infiniti_qx_60.png"),
 
-	    "Isuzu" => array("i/isuzu_d_max.png"),
-	    "Isuzu|d-max" => array("i/isuzu_d_max.png"),
-	    "Isuzu|d max" => array("i/isuzu_d_max.png"),
-	    "Isuzu|dmax" => array("i/isuzu_d_max.png"),
+	    "Isuzu" => array("i/isuzu_d_max.png", "i/isuzu_d_max_1.png"),
+	    "Isuzu|d-max" => array("i/isuzu_d_max.png", "i/isuzu_d_max_1.png"),
+	    "Isuzu|d max" => array("i/isuzu_d_max.png", "i/isuzu_d_max_1.png"),
+	    "Isuzu|dmax" => array("i/isuzu_d_max.png", "i/isuzu_d_max_1.png"),
 
 	    "Jaguar" => array("i/jaguar_xf.png"),
 	    "Jaguar|XF" => array("i/jaguar_xf.png"),
@@ -107,17 +107,17 @@
 	    "Kia|Ceed" => array("i/kia_ceed.png"),
 	    "Kia|Cee'd" => array("i/kia_ceed.png"),
 	    "Kia|Rio" => array("i/kia_rio.png"),
-	    "Kia|Soul" => array("i/kia_soul.png"),
+	    "Kia|Soul" => array("i/kia_soul.png", "i/kia_soul_1.png"),
 
 	    "Lancia" => array("i/lancia_y.png"),
 	    "Lancia|Y" => array("i/lancia_y.png"),
 
-	    "Land Rover" => array("i/land_rover_range_rover.png"),
-	    "Land Rover|Range Rover" => array("i/land_rover_range_rover.png"),
-	    "Land Rover|Range" => array("i/land_rover_range_rover.png"),
+	    "Land Rover" => array("i/land_rover_range_rover.png", "i/land_rover_range_rover_1.png"),
+	    "Land Rover|Range Rover" => array("i/land_rover_range_rover.png", "i/land_rover_range_rover_1.png"),
+	    "Land Rover|Range" => array("i/land_rover_range_rover.png", "i/land_rover_range_rover_1.png"),
 
-	    "Lexus" => array("i/lexus_nx.png"),
-	    "Lexus|NX" => array("i/lexus_nx.png"),
+	    "Lexus" => array("i/lexus_nx.png", "i/lexus_nx_1.png"),
+	    "Lexus|NX" => array("i/lexus_nx.png", "i/lexus_nx_1.png"),
 
 	    "Lotus" => array("i/lotus_elise.png"),
 	    "Lotus|Elise" => array("i/lotus_elise.png"),
@@ -208,9 +208,9 @@
 	    "Toyota|Land Cruiser 200" => array("i/toyota_land_druiser_200.png"),
 	    "Toyota|LandCruiser 200" => array("i/toyota_land_druiser_200.png"),
 
-	    "Volvo" => array("i/volvo_xc_70.png"),
-	    "Volvo|XC70" => array("i/volvo_xc_70.png"),
-	    "Volvo|XC 70" => array("i/volvo_xc_70.png"),
+	    "Volvo" => array("i/volvo_xc_70.png", "i/volvo_xc_70_1.png"),
+	    "Volvo|XC70" => array("i/volvo_xc_70.png", "i/volvo_xc_70_1.png"),
+	    "Volvo|XC 70" => array("i/volvo_xc_70.png", "i/volvo_xc_70_1.png"),
 
 	    "Volkswagen" => array("i/vw golf.png"),
 	    "Volkswagen|Golf" => array("i/vw golf.png"),
@@ -246,7 +246,7 @@
 	function findCarImage($mark, $model = false){
 		global $carImages;
 		$carImagesLower = array_change_key_case($carImages);
-		$img = array(0 => "i/car.png");
+		$img = array(0 => "i/cadillac_escalade.png");
 		if($mark && $model){
 			$res = $carImagesLower[mb_strtolower($mark."|".$model)];
 			if($res){
@@ -289,7 +289,7 @@
 		$carName2 = $carName;
 		$carName3 = $carName;
 	}else{
-		$img[0] = $img[1] = "i/car.png";
+		$img[0] = $img[1] = "i/cadillac_escalade.png";
 		$carName1 = "автомобиль";
 		$carName2 = "автомобиля";
 		$carName3 = "автомобиле";
@@ -305,7 +305,7 @@
 		var arCars = <?=$cars?>;
 	</script>
 
-	<title>Автобезопасность | Чип-тюнинг</title>
+	<title>Чип-тюнинг автомобиля всего за 1 день! Автобезопасность</title>
 	<meta name="keywords" content=''>
 	<meta name="description" content=''>
 
