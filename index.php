@@ -26,9 +26,9 @@
 	    "BMW|X5" => array("i/bmw_x5.png"),
 	    "BMW|X 5" => array("i/bmw_x5.png"),
 
-	    "BYD" => "i/byd.png",
+	    "BYD" => array("i/byd.png"),
 
-	    "Brilliance" => "i/brilliance.png",
+	    "Brilliance" => array("i/brilliance.png"),
 
 	    "Cadillac" => array("i/cadillac_escalade.png"),
 	    "Cadillac|Escalade" => array("i/cadillac_escalade.png"),
@@ -45,7 +45,7 @@
 	    "Chrysler|300c" => array("i/chrysler_300c.png"),
 	    "Chrysler|300 c" => array("i/chrysler_300c.png"),
 
-		"Daewoo" => "i/daewoo.png",
+		"Daewoo" => array("i/daewoo.png"),
 
 	    "Dodge" => array("i/dodge_caliber.png"),
 	    "Dodge|Caliber" => array("i/dodge_caliber.png"),
@@ -66,7 +66,7 @@
 	    "GMC" => array("i/gmc_yukon.png"),
 	    "GMC|Yukon" => array("i/gmc_yukon.png"),
 
-	    "Great" => "i/great_wall.png",
+	    "Great" => array("i/great_wall.png"),
 
 	    "Honda" => array("i/Civic_FD.png"),
 	    "Honda|Civic" => array("i/Civic_FD.png"),
@@ -82,9 +82,9 @@
 	    "Huyndai|Avante" => array("i/huyndai_avante.png"),
 	    "Huyndai|Sonata" => array("i/huyndai_sonata.png"),
 
-	    "Hyundai" => "i/huyndai_avante.png",
-	    "Hyundai|Avante" => "i/huyndai_avante.png",
-	    "Hyundai|Sonata" => "i/huyndai_sonata.png",
+	    "Hyundai" => array("i/huyndai_avante.png"),
+	    "Hyundai|Avante" => array("i/huyndai_avante.png"),
+	    "Hyundai|Sonata" => array("i/huyndai_sonata.png"),
 
 	    "Infiniti" => array("i/infiniti_qx_60.png"),
 	    "Infiniti|QX 60" => array("i/infiniti_qx_60.png"),
@@ -163,7 +163,7 @@
 	    "Renault|Megane" => array("i/renault_megane.png"),
 	    "Renault|Logan" => array("i/renault_logan.png"),
 
-	    "Rover" => "i/rover.png",
+	    "Rover" => array("i/rover.png"),
 
 	    "Saab" => array("i/saab_9_3.png"),
 	    "Saab|9-3" => array("i/saab_9_3.png"),
@@ -220,9 +220,9 @@
 	    "Volkswagen|Touareg" => array("i/vw_touareg.png"),
 	    "Volkswagen|Tuareg" => array("i/vw_touareg.png"),
 
-	    "УАЗ" => "i/uaz.png",
-	    "Патриот" => "i/uaz.png",
-	    "UAZ" => "i/uaz.png",
+	    "УАЗ" => array("i/uaz.png"),
+	    "Патриот" => array("i/uaz.png"),
+	    "UAZ" => array("i/uaz.png"),
 	    
 	);
 
