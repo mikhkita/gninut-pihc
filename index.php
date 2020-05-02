@@ -26,6 +26,10 @@
 	    "BMW|X5" => "i/bmw_x5.png",
 	    "BMW|X 5" => "i/bmw_x5.png",
 
+	    "BYD" => "i/byd.png",
+
+	    "Brilliance" => "i/brilliance.png",
+
 	    "Cadillac" => "i/cadillac_escalade.png",
 	    "Cadillac|Escalade" => "i/cadillac_escalade.png",
 
@@ -40,6 +44,8 @@
 	    "Chrysler" => "i/chrysler_300c.png",
 	    "Chrysler|300c" => "i/chrysler_300c.png",
 	    "Chrysler|300 c" => "i/chrysler_300c.png",
+
+		"Daewoo" => "i/daewoo.png",
 
 	    "Dodge" => "i/dodge_caliber.png",
 	    "Dodge|Caliber" => "i/dodge_caliber.png",
@@ -60,6 +66,8 @@
 	    "GMC" => "i/gmc_yukon.png",
 	    "GMC|Yukon" => "i/gmc_yukon.png",
 
+	    "Great" => "i/great_wall.png",
+
 	    "Honda" => "i/Civic_FD.png",
 	    "Honda|Civic" => "i/Civic_FD.png",
 	    "Honda|Accord" => "i/honda_accord.png",
@@ -73,6 +81,10 @@
 	    "Huyndai" => "i/huyndai_avante.png",
 	    "Huyndai|Avante" => "i/huyndai_avante.png",
 	    "Huyndai|Sonata" => "i/huyndai_sonata.png",
+
+	    "Hyundai" => "i/huyndai_avante.png",
+	    "Hyundai|Avante" => "i/huyndai_avante.png",
+	    "Hyundai|Sonata" => "i/huyndai_sonata.png",
 
 	    "Infiniti" => "i/infiniti_qx_60.png",
 	    "Infiniti|QX 60" => "i/infiniti_qx_60.png",
@@ -101,6 +113,7 @@
 	    "Lancia|Y" => "i/lancia_y.png",
 
 	    "Land Rover" => "i/land_rover_range_rover.png",
+	    "LandRover" => "i/land_rover_range_rover.png",
 	    "Land Rover|Range Rover" => "i/land_rover_range_rover.png",
 	    "Land Rover|Range" => "i/land_rover_range_rover.png",
 
@@ -151,6 +164,7 @@
 	    "Renault|Megane" => "i/renault_megane.png",
 	    "Renault|Logan" => "i/renault_logan.png",
 
+	    "Rover" => "i/rover.png",
 
 	    "Saab" => "i/saab_9_3.png",
 	    "Saab|9-3" => "i/saab_9_3.png",
@@ -205,7 +219,11 @@
 	    "Volkswagen|Polo" => "i/vw_polo.png",
 	    "Volkswagen|Polo Sedan" => "i/vw_polo.png",
 	    "Volkswagen|Touareg" => "i/vw_touareg.png",
-	    "Volkswagen|Tuareg" => "i/vw_touareg.png"
+	    "Volkswagen|Tuareg" => "i/vw_touareg.png",
+
+	    "УАЗ" => "i/uaz.png",
+	    "Патриот" => "i/uaz.png",
+	    "UAZ" => "i/uaz.png",
 	);
 
 	$mark = "";
