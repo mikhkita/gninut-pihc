@@ -329,12 +329,33 @@ $(document).ready(function(){
         if(model){
             target += "|"+model;
             if(carImages[target]){
-                $($carSelectors).css('background-image', 'url("'+carImages[target]+'")');
+
+                if (typeof carImages[target][1] == 'undefined') {
+                    carImages[target][1] = carImages[target][0];
+                }
+
+                $('.b-car').css('background-image', 'url("'+carImages[target][0]+'")');
+                $('.b-3-car').css('background-image', 'url("'+carImages[target][1]+'")');
+                $('.b-7-car').css('background-image', 'url("'+carImages[target][1]+'")');
             }else if(carImages[mark]){
-                $($carSelectors).css('background-image', 'url("'+carImages[mark]+'")');
+
+                if (typeof carImages[mark][1] == 'undefined') {
+                    carImages[mark][1] = carImages[mark][0];
+                }
+
+                $('.b-car').css('background-image', 'url("'+carImages[mark][0]+'")');
+                $('.b-3-car').css('background-image', 'url("'+carImages[mark][1]+'")');
+                $('.b-7-car').css('background-image', 'url("'+carImages[mark][1]+'")');
             }
         }else if(carImages[mark]){
-            $($carSelectors).css('background-image', 'url("'+carImages[mark]+'")');
+
+            if (typeof carImages[mark][1] == 'undefined') {
+                carImages[mark][1] = carImages[mark][0];
+            }
+
+            $('.b-car').css('background-image', 'url("'+carImages[mark][0]+'")');
+            $('.b-3-car').css('background-image', 'url("'+carImages[mark][1]+'")');
+            $('.b-7-car').css('background-image', 'url("'+carImages[mark][1]+'")');
         }
 
         $('.current-car').text(mark + ((model) ? " "+model : ""));

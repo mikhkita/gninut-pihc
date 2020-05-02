@@ -1,229 +1,229 @@
 <?
 	$cars = file_get_contents('storage/cars.json');
 	$carImages = array(
-		"Acura" => "i/Acura_rdx.png",
-	    "Acura|RDX" => "i/Acura_rdx.png",
+		"Acura" => array("i/Acura_rdx.png"),
+	    "Acura|RDX" => array("i/Acura_rdx.png"),
 
-	    "Alfa Romeo" => "i/alfa_romeo_spider_8c.png",
-	    "Alfa Romeo|Spider" => "i/alfa_romeo_spider_8c.png",
+	    "Alfa Romeo" => array("i/alfa_romeo_spider_8c.png"),
+	    "Alfa Romeo|Spider" => array("i/alfa_romeo_spider_8c.png"),
 
-	    "Audi" => "i/Audi_A4.png",
-	    "Audi|A4" => "i/Audi_A4.png",
-	    "Audi|A 4" => "i/Audi_A4.png",
-	    "Audi|A6" => "i/Audi_a6.png",
-	    "Audi|A 6" => "i/Audi_a6.png",
+	    "Audi" => array("i/Audi_A4.png"),
+	    "Audi|A4" => array("i/Audi_A4.png"),
+	    "Audi|A 4" => array("i/Audi_A4.png"),
+	    "Audi|A6" => array("i/Audi_a6.png"),
+	    "Audi|A 6" => array("i/Audi_a6.png"),
 
-	    "Bentley" => "i/bentley_continental_gt.png",
-	    "Bentley|Continental" => "i/bentley_continental_gt.png",
+	    "Bentley" => array("i/bentley_continental_gt.png"),
+	    "Bentley|Continental" => array("i/bentley_continental_gt.png"),
 
-	    "BMW" => "i/bmw_5_series.png",
-	    "BMW|5-series" => "i/bmw_5_series.png",
-	    "BMW|5" => "i/bmw_5_series.png",
-	    "BMW|5 series" => "i/bmw_5_series.png",
-	    "BMW|3-series" => "i/bmw_3.png",
-	    "BMW|3" => "i/bmw_3.png",
-	    "BMW|3 series" => "i/bmw_3.png",
-	    "BMW|X5" => "i/bmw_x5.png",
-	    "BMW|X 5" => "i/bmw_x5.png",
+	    "BMW" => array("i/bmw_5_series.png"),
+	    "BMW|5-series" => array("i/bmw_5_series.png"),
+	    "BMW|5" => array("i/bmw_5_series.png"),
+	    "BMW|5 series" => array("i/bmw_5_series.png"),
+	    "BMW|3-series" => array("i/bmw_3.png"),
+	    "BMW|3" => array("i/bmw_3.png"),
+	    "BMW|3 series" => array("i/bmw_3.png"),
+	    "BMW|X5" => array("i/bmw_x5.png"),
+	    "BMW|X 5" => array("i/bmw_x5.png"),
 
 	    "BYD" => "i/byd.png",
 
 	    "Brilliance" => "i/brilliance.png",
 
-	    "Cadillac" => "i/cadillac_escalade.png",
-	    "Cadillac|Escalade" => "i/cadillac_escalade.png",
+	    "Cadillac" => array("i/cadillac_escalade.png"),
+	    "Cadillac|Escalade" => array("i/cadillac_escalade.png"),
 
-	    "Citroen" => "i/citroen.png",
+	    "Citroen" => array("i/citroen.png"),
 
-	    "Chery" => "i/chery_tiggo.png",
-	    "Chery|Tiggo" => "i/chery_tiggo.png",
+	    "Chery" => array("i/chery_tiggo.png"),
+	    "Chery|Tiggo" => array("i/chery_tiggo.png"),
 
-	    "Chevrolet" => "i/chevrolet_cruze.png",
-	    "Chevrolet|Cruze" => "i/chevrolet_cruze.png",
+	    "Chevrolet" => array("i/chevrolet_cruze.png"),
+	    "Chevrolet|Cruze" => array("i/chevrolet_cruze.png"),
 
-	    "Chrysler" => "i/chrysler_300c.png",
-	    "Chrysler|300c" => "i/chrysler_300c.png",
-	    "Chrysler|300 c" => "i/chrysler_300c.png",
+	    "Chrysler" => array("i/chrysler_300c.png"),
+	    "Chrysler|300c" => array("i/chrysler_300c.png"),
+	    "Chrysler|300 c" => array("i/chrysler_300c.png"),
 
 		"Daewoo" => "i/daewoo.png",
 
-	    "Dodge" => "i/dodge_caliber.png",
-	    "Dodge|Caliber" => "i/dodge_caliber.png",
+	    "Dodge" => array("i/dodge_caliber.png"),
+	    "Dodge|Caliber" => array("i/dodge_caliber.png"),
 
-	    "Fiat" => "i/fiat_500.png",
-	    "Fiat|500" => "i/fiat_500.png",
+	    "Fiat" => array("i/fiat_500.png"),
+	    "Fiat|500" => array("i/fiat_500.png"),
 
-	    "Ford" => "i/ford_kuga.png",
-	    "Ford|Kuga" => "i/ford_kuga.png",
-	    "Ford|Mondeo" => "i/ford_mondeo.png",
+	    "Ford" => array("i/ford_kuga.png"),
+	    "Ford|Kuga" => array("i/ford_kuga.png"),
+	    "Ford|Mondeo" => array("i/ford_mondeo.png"),
 
-	    "Ferrari" => "i/Ferrari_430.png",
-	    "Ferrari|F430" => "i/Ferrari_430.png",
-	    "Ferrari|430" => "i/Ferrari_430.png",
+	    "Ferrari" => array("i/Ferrari_430.png"),
+	    "Ferrari|F430" => array("i/Ferrari_430.png"),
+	    "Ferrari|430" => array("i/Ferrari_430.png"),
 
-	    "Geely" => "i/geely.png",
+	    "Geely" => array("i/geely.png"),
 
-	    "GMC" => "i/gmc_yukon.png",
-	    "GMC|Yukon" => "i/gmc_yukon.png",
+	    "GMC" => array("i/gmc_yukon.png"),
+	    "GMC|Yukon" => array("i/gmc_yukon.png"),
 
 	    "Great" => "i/great_wall.png",
 
-	    "Honda" => "i/Civic_FD.png",
-	    "Honda|Civic" => "i/Civic_FD.png",
-	    "Honda|Accord" => "i/honda_accord.png",
-	    "Honda|CR-V" => "i/honda_crv.png",
-	    "Honda|CRV" => "i/honda_crv.png",
-	    "Honda|CR V" => "i/honda_crv.png",
+	    "Honda" => array("i/Civic_FD.png"),
+	    "Honda|Civic" => array("i/Civic_FD.png"),
+	    "Honda|Accord" => array("i/honda_accord.png"),
+	    "Honda|CR-V" => array("i/honda_crv.png"),
+	    "Honda|CRV" => array("i/honda_crv.png"),
+	    "Honda|CR V" => array("i/honda_crv.png"),
 
-	    "Hummer" => "i/hummer_h2.png",
-	    "Hummer|h2" => "i/hummer_h2.png",
+	    "Hummer" => array("i/hummer_h2.png"),
+	    "Hummer|h2" => array("i/hummer_h2.png"),
 
-	    "Huyndai" => "i/huyndai_avante.png",
-	    "Huyndai|Avante" => "i/huyndai_avante.png",
-	    "Huyndai|Sonata" => "i/huyndai_sonata.png",
+	    "Huyndai" => array("i/huyndai_avante.png"),
+	    "Huyndai|Avante" => array("i/huyndai_avante.png"),
+	    "Huyndai|Sonata" => array("i/huyndai_sonata.png"),
 
 	    "Hyundai" => "i/huyndai_avante.png",
 	    "Hyundai|Avante" => "i/huyndai_avante.png",
 	    "Hyundai|Sonata" => "i/huyndai_sonata.png",
 
-	    "Infiniti" => "i/infiniti_qx_60.png",
-	    "Infiniti|QX 60" => "i/infiniti_qx_60.png",
-		"Infiniti|QX60" => "i/infiniti_qx_60.png",
-		"Infiniti|QX" => "i/infiniti_qx_60.png",	   
+	    "Infiniti" => array("i/infiniti_qx_60.png"),
+	    "Infiniti|QX 60" => array("i/infiniti_qx_60.png"),
+		"Infiniti|QX60" => array("i/infiniti_qx_60.png"),
+		"Infiniti|QX" => array("i/infiniti_qx_60.png"),
 
-	    "Isuzu" => "i/isuzu_d_max.png",
-	    "Isuzu|d-max" => "i/isuzu_d_max.png",
-	    "Isuzu|d max" => "i/isuzu_d_max.png",
-	    "Isuzu|dmax" => "i/isuzu_d_max.png",
+	    "Isuzu" => array("i/isuzu_d_max.png"),
+	    "Isuzu|d-max" => array("i/isuzu_d_max.png"),
+	    "Isuzu|d max" => array("i/isuzu_d_max.png"),
+	    "Isuzu|dmax" => array("i/isuzu_d_max.png"),
 
-	    "Jaguar" => "i/jaguar_xf.png",
-	    "Jaguar|XF" => "i/jaguar_xf.png",
+	    "Jaguar" => array("i/jaguar_xf.png"),
+	    "Jaguar|XF" => array("i/jaguar_xf.png"),
 
-	    "Jeep" => "i/jeep_grand_cherokee.png",
-	    "Jeep|Grand Cherokee" => "i/jeep_grand_cherokee.png",
+	    "Jeep" => array("i/jeep_grand_cherokee.png"),
+	    "Jeep|Grand Cherokee" => array("i/jeep_grand_cherokee.png"),
 
-	    "Kia" => "i/kia_sportage.png",
-	    "Kia|Sportage" => "i/kia_sportage.png",
-	    "Kia|Ceed" => "i/kia_ceed.png",
-	    "Kia|Cee'd" => "i/kia_ceed.png",
-	    "Kia|Rio" => "i/kia_rio.png",
-	    "Kia|Soul" => "i/kia_soul.png",
+	    "Kia" => array("i/kia_sportage.png"),
+	    "Kia|Sportage" => array("i/kia_sportage.png"),
+	    "Kia|Ceed" => array("i/kia_ceed.png"),
+	    "Kia|Cee'd" => array("i/kia_ceed.png"),
+	    "Kia|Rio" => array("i/kia_rio.png"),
+	    "Kia|Soul" => array("i/kia_soul.png"),
 
-	    "Lancia" => "i/lancia_y.png",
-	    "Lancia|Y" => "i/lancia_y.png",
+	    "Lancia" => array("i/lancia_y.png"),
+	    "Lancia|Y" => array("i/lancia_y.png"),
 
-	    "Land Rover" => "i/land_rover_range_rover.png",
-	    "LandRover" => "i/land_rover_range_rover.png",
-	    "Land Rover|Range Rover" => "i/land_rover_range_rover.png",
-	    "Land Rover|Range" => "i/land_rover_range_rover.png",
+	    "Land Rover" => array("i/land_rover_range_rover.png"),
+	    "Land Rover|Range Rover" => array("i/land_rover_range_rover.png"),
+	    "Land Rover|Range" => array("i/land_rover_range_rover.png"),
 
-	    "Lexus" => "i/lexus_nx.png",
-	    "Lexus|NX" => "i/lexus_nx.png",
+	    "Lexus" => array("i/lexus_nx.png"),
+	    "Lexus|NX" => array("i/lexus_nx.png"),
 
-	    "Lotus" => "i/lotus_elise.png",
-	    "Lotus|Elise" => "i/lotus_elise.png",
+	    "Lotus" => array("i/lotus_elise.png"),
+	    "Lotus|Elise" => array("i/lotus_elise.png"),
 
-	    "Mazda" => "i/Mazda3.png",
-	    "Mazda|3" => "i/Mazda3.png",
-	    "Mazda|6" => "i/Mazda_6.png",
+	    "Mazda" => array("i/Mazda3.png"),
+	    "Mazda|3" => array("i/Mazda3.png"),
+	    "Mazda|6" => array("i/Mazda_6.png"),
 
-	    "Mercedes" => "i/mercedes_e_class.png",
-	    "Mercedes|E-class" => "i/mercedes_e_class.png",
-	    "Mercedes|E-classe" => "i/mercedes_e_class.png",
-	    "Mercedes|E" => "i/mercedes_e_class.png",
-
-
-	    "Mini" => "i/mini_cooper.png",
-	    "Mini|Cooper" => "i/mini_cooper.png",
+	    "Mercedes" => array("i/mercedes_e_class.png"),
+	    "Mercedes|E-class" => array("i/mercedes_e_class.png"),
+	    "Mercedes|E-classe" => array("i/mercedes_e_class.png"),
+	    "Mercedes|E" => array("i/mercedes_e_class.png"),
 
 
-	    "Mitsubishi" => "i/mitsubishi_lancer_x.png",
-	    "Mitsubishi|Lancer" => "i/mitsubishi_lancer_x.png",
-	    "Mitsubishi|Lancer X" => "i/mitsubishi_lancer_x.png",
+	    "Mini" => array("i/mini_cooper.png"),
+	    "Mini|Cooper" => array("i/mini_cooper.png"),
 
 
-	    "Nissan" => "i/nissan_qashqai.png",
-	    "Nissan|Qashqai" => "i/nissan_qashqai.png",
-	    "Nissan|Juke" => "i/nissan_juke.png",
+	    "Mitsubishi" => array("i/mitsubishi_lancer_x.png"),
+	    "Mitsubishi|Lancer" => array("i/mitsubishi_lancer_x.png"),
+	    "Mitsubishi|Lancer X" => array("i/mitsubishi_lancer_x.png"),
 
 
-	    "Opel" => "i/opel_astra.png",
-	    "Opel|Astra" => "i/opel_astra.png",
-	    "Opel|Corsa" => "i/opel_corsa.png",
+	    "Nissan" => array("i/nissan_qashqai.png"),
+	    "Nissan|Qashqai" => array("i/nissan_qashqai.png"),
+	    "Nissan|Juke" => array("i/nissan_juke.png"),
 
 
-	    "Peugeot" => "i/peugeot_3008.png",
-	    "Peugeot|3008" => "i/peugeot_3008.png",
+	    "Opel" => array("i/opel_astra.png"),
+	    "Opel|Astra" => array("i/opel_astra.png"),
+	    "Opel|Corsa" => array("i/opel_corsa.png"),
 
 
-	    "Porsche" => "i/porsche_cayenne.png",
-	    "Porsche|Cayenne" => "i/porsche_cayenne.png",
+	    "Peugeot" => array("i/peugeot_3008.png"),
+	    "Peugeot|3008" => array("i/peugeot_3008.png"),
 
 
-	    "Renault" => "i/renault_megane.png",
-	    "Renault|Megane" => "i/renault_megane.png",
-	    "Renault|Logan" => "i/renault_logan.png",
+	    "Porsche" => array("i/porsche_cayenne.png"),
+	    "Porsche|Cayenne" => array("i/porsche_cayenne.png"),
+
+
+	    "Renault" => array("i/renault_megane.png"),
+	    "Renault|Megane" => array("i/renault_megane.png"),
+	    "Renault|Logan" => array("i/renault_logan.png"),
 
 	    "Rover" => "i/rover.png",
 
-	    "Saab" => "i/saab_9_3.png",
-	    "Saab|9-3" => "i/saab_9_3.png",
-	    "Saab|9 3" => "i/saab_9_3.png",
-	    "Saab|93" => "i/saab_9_3.png",
-	    "Saab|9" => "i/saab_9_3.png",
+	    "Saab" => array("i/saab_9_3.png"),
+	    "Saab|9-3" => array("i/saab_9_3.png"),
+	    "Saab|9 3" => array("i/saab_9_3.png"),
+	    "Saab|93" => array("i/saab_9_3.png"),
+	    "Saab|9" => array("i/saab_9_3.png"),
 
-	    "Seat" => "i/seat_ibiza.png",
-	    "Seat|Ibiza" => "i/seat_ibiza.png",
+	    "Seat" => array("i/seat_ibiza.png"),
+	    "Seat|Ibiza" => array("i/seat_ibiza.png"),
 
-	    "Skoda" => "i/skoda_octavia.png",
-	    "Skoda|Octavia" => "i/skoda_octavia.png",
-	    "Skoda|Fabia" => "i/skoda_fabia.png",
+	    "Skoda" => array("i/skoda_octavia.png"),
+	    "Skoda|Octavia" => array("i/skoda_octavia.png"),
+	    "Skoda|Fabia" => array("i/skoda_fabia.png"),
 
-	    "Smart" => "i/smart_fortwo.png",
-	    "Smart|Fortwo" => "i/smart_fortwo.png",
-	    "Smart|For two" => "i/smart_fortwo.png",
-	    "Smart|For-two" => "i/smart_fortwo.png",
+	    "Smart" => array("i/smart_fortwo.png"),
+	    "Smart|Fortwo" => array("i/smart_fortwo.png"),
+	    "Smart|For two" => array("i/smart_fortwo.png"),
+	    "Smart|For-two" => array("i/smart_fortwo.png"),
 
-	    "Ssang Yong" => "i/ssang_yong_action.png",
-	    "Ssang Yong|Actyon" => "i/ssang_yong_action.png",
-	    "Ssang Yong|Actyon Sport" => "i/ssang_yong_action.png",
-	    "Ssang Yong|Action" => "i/ssang_yong_action.png",
-	    "Ssang Yong|Action Sport" => "i/ssang_yong_action.png",
-	    "SsangYong" => "i/ssang_yong_action.png",
-	    "SsangYong|Actyon" => "i/ssang_yong_action.png",
-	    "SsangYong|Actyon Sport" => "i/ssang_yong_action.png",
-	    "SsangYong|Action" => "i/ssang_yong_action.png",
-	    "SsangYong|Action Sport" => "i/ssang_yong_action.png",
+	    "Ssang Yong" => array("i/ssang_yong_action.png"),
+	    "Ssang Yong|Actyon" => array("i/ssang_yong_action.png"),
+	    "Ssang Yong|Actyon Sport" => array("i/ssang_yong_action.png"),
+	    "Ssang Yong|Action" => array("i/ssang_yong_action.png"),
+	    "Ssang Yong|Action Sport" => array("i/ssang_yong_action.png"),
+	    "SsangYong" => array("i/ssang_yong_action.png"),
+	    "SsangYong|Actyon" => array("i/ssang_yong_action.png"),
+	    "SsangYong|Actyon Sport" => array("i/ssang_yong_action.png"),
+	    "SsangYong|Action" => array("i/ssang_yong_action.png"),
+	    "SsangYong|Action Sport" => array("i/ssang_yong_action.png"),
 
-	    "Subaru" => "i/subaru_impreza.png",
-	    "Subaru|Impreza" => "i/subaru_impreza.png",
+	    "Subaru" => array("i/subaru_impreza.png"),
+	    "Subaru|Impreza" => array("i/subaru_impreza.png"),
 
-	    "Suzuki" => "i/suzuki_grand_vitara.png",
-	    "Suzuki|Grand Vitara" => "i/suzuki_grand_vitara.png",
+	    "Suzuki" => array("i/suzuki_grand_vitara.png"),
+	    "Suzuki|Grand Vitara" => array("i/suzuki_grand_vitara.png"),
 
-	    "Toyota" => "i/Camry_XV40.png",
-	    "Toyota|Camry" => "i/Camry_XV40.png",
-	    "Toyota|Corolla" => "i/toyota_corolla.png",
-	    "Toyota|Land Cruiser" => "i/toyota_land_druiser_200.png",
-	    "Toyota|LandCruiser" => "i/toyota_land_druiser_200.png",
-	    "Toyota|Land Cruiser 200" => "i/toyota_land_druiser_200.png",
-	    "Toyota|LandCruiser 200" => "i/toyota_land_druiser_200.png",
+	    "Toyota" => array("i/Camry_XV40.png"),
+	    "Toyota|Camry" => array("i/Camry_XV40.png"),
+	    "Toyota|Corolla" => array("i/toyota_corolla.png"),
+	    "Toyota|Land Cruiser" => array("i/toyota_land_druiser_200.png"),
+	    "Toyota|LandCruiser" => array("i/toyota_land_druiser_200.png"),
+	    "Toyota|Land Cruiser 200" => array("i/toyota_land_druiser_200.png"),
+	    "Toyota|LandCruiser 200" => array("i/toyota_land_druiser_200.png"),
 
-	    "Volvo" => "i/volvo_xc_70.png",
-	    "Volvo|XC70" => "i/volvo_xc_70.png",
-	    "Volvo|XC 70" => "i/volvo_xc_70.png",
+	    "Volvo" => array("i/volvo_xc_70.png"),
+	    "Volvo|XC70" => array("i/volvo_xc_70.png"),
+	    "Volvo|XC 70" => array("i/volvo_xc_70.png"),
 
-	    "Volkswagen" => "i/vw golf.png",
-	    "Volkswagen|Golf" => "i/vw golf.png",
-	    "Volkswagen|Passat" => "i/vw_passat.png",
-	    "Volkswagen|Polo" => "i/vw_polo.png",
-	    "Volkswagen|Polo Sedan" => "i/vw_polo.png",
-	    "Volkswagen|Touareg" => "i/vw_touareg.png",
-	    "Volkswagen|Tuareg" => "i/vw_touareg.png",
+	    "Volkswagen" => array("i/vw golf.png"),
+	    "Volkswagen|Golf" => array("i/vw golf.png"),
+	    "Volkswagen|Passat" => array("i/vw_passat.png"),
+	    "Volkswagen|Polo" => array("i/vw_polo.png"),
+	    "Volkswagen|Polo Sedan" => array("i/vw_polo.png"),
+	    "Volkswagen|Touareg" => array("i/vw_touareg.png"),
+	    "Volkswagen|Tuareg" => array("i/vw_touareg.png"),
 
 	    "УАЗ" => "i/uaz.png",
 	    "Патриот" => "i/uaz.png",
 	    "UAZ" => "i/uaz.png",
+	    
 	);
 
 	$mark = "";
@@ -246,7 +246,7 @@
 	function findCarImage($mark, $model = false){
 		global $carImages;
 		$carImagesLower = array_change_key_case($carImages);
-		$img = "i/car.png";
+		$img = array(0 => "i/car.png");
 		if($mark && $model){
 			$res = $carImagesLower[mb_strtolower($mark."|".$model)];
 			if($res){
@@ -269,21 +269,27 @@
 	$carName1 = "";
 	$carName2 = "";
 	$carName3 = "";
-	$img = "";
+	$img = array();
 	if($mark && $model){
 		$img = findCarImage($mark, $model);
+		if (!isset($img[1])) {
+			$img[1] = $img[0];
+		}
 		$carName = $mark." ".$model;
 		$carName1 = $carName;
 		$carName2 = $carName;
 		$carName3 = $carName;
 	}elseif($mark){
 		$img = findCarImage($mark);
+		if (!isset($img[1])) {
+			$img[1] = $img[0];
+		}
 		$carName = $mark;
 		$carName1 = $carName;
 		$carName2 = $carName;
 		$carName3 = $carName;
 	}else{
-		$img = "i/car.png";
+		$img[0] = $img[1] = "i/car.png";
 		$carName1 = "автомобиль";
 		$carName2 = "автомобиля";
 		$carName3 = "автомобиле";
@@ -364,7 +370,7 @@
 						<div class="b-btn-info">это не займет много времени</div>
 					</div>
 				</div>
-				<div class="b-car" style="background-image: url('<?echo $img;?>');"></div>
+				<div class="b-car" style="background-image: url('<?=$img[0];?>');"></div>
 			</div>
 			<a href="#" class="b-1-arrow b-go" data-block=".b-2">
 				<div class="b-1-arrow-text">Подробнее о чип-тюнинге</div>
@@ -398,7 +404,7 @@
 	<div class="b b-3">
 		<div class="b-3-car-cont">
 			<div class="b-block">
-				<div class="b-3-car" style="background-image: url('<?echo $img;?>');"></div>
+				<div class="b-3-car" style="background-image: url('<?=$img[1];?>');"></div>
 				<div class="b-3-car-text"><b>Представьте</b>, что ваш автомобиль срывается с места, как только вы&nbsp;нажали на педаль газа…</div>
 			</div>
 		</div>
@@ -654,7 +660,7 @@
 			<div class="b-7-left">
 				<h2>Попробуйте чип-тюнинг на&nbsp;ваш&nbsp;<span class="current-car"><?=$carName1?></span><br><b>10 дней бесплатно!</b></h2>
 				<h3>Переживаете что не понравится или передумаете? Вернём деньги и заводскую прошивку в тот же день без всяких заявлений!</h3>
-				<div class="b-7-car" style="background-image: url('<?echo $img;?>');"></div>
+				<div class="b-7-car" style="background-image: url('<?=$img[1];?>');"></div>
 			</div>
 			<div class="b-7-right">
 				<form class="b-form-request" action="kitsend.php" method="POST">

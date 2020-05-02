@@ -1962,6 +1962,7 @@ input:-moz-placeholder {
 				margin-left: 0;
 				left: -60px;
 				top: calc(100% + 32px);
+				top: 100%;
 			}
 			.b-7-right{
 			    width: calc(100% + 16px);
