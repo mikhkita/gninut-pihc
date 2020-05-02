@@ -231,10 +231,10 @@
 	if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
 		$arCars = json_decode($cars, true);
 		foreach ($arCars as $_mark => $_models) {
-			if(preg_match("/".$_mark."/iu", $_GET["keywords"])){
+			if(preg_match("@".$_mark."@iu", $_GET["keywords"])){
 				$mark = $_mark;
 				foreach ($_models as $_model => $value) {
-					if(preg_match("/".$_model."/iu", $_GET["keywords"])){
+					if(preg_match("@".$_model."@iu", $_GET["keywords"])){
 						$model = $_model;
 					}
 				}
@@ -243,9 +243,17 @@
 		}
 	}
 
+	function array_change_key_case_unicode($arr, $c = CASE_LOWER) {
+	    $c = ($c == CASE_LOWER) ? MB_CASE_LOWER : MB_CASE_UPPER;
+	    foreach ($arr as $k => $v) {
+	        $ret[mb_convert_case($k, $c, "UTF-8")] = $v;
+	    }
+	    return $ret;
+	}
+
 	function findCarImage($mark, $model = false){
 		global $carImages;
-		$carImagesLower = array_change_key_case($carImages);
+		$carImagesLower = array_change_key_case_unicode($carImages);
 		$img = array(0 => "i/car.png");
 		if($mark && $model){
 			$res = $carImagesLower[mb_strtolower($mark."|".$model)];
@@ -500,7 +508,7 @@
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/3.svg');"></div>
-										<div class="b-tab-slider-left-top-text">Экология  и евро-нормы</div>
+										<div class="b-tab-slider-left-top-text">Экология и евро-нормы</div>
 									</div>
 									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
 								</div>
@@ -832,7 +840,7 @@
 		</div>
 		<div class="b-popup" id="b-phone-popup">
 			<form action="kitsend.php" method="POST">
-				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер перезвонит Вам  в&nbsp;ближайшее время</p>
+				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер перезвонит Вам в&nbsp;ближайшее время</p>
 				<div class="b-input-string b-input-user">
 					<input type="text" id="name" name="name" placeholder="Ваше имя" required="">
 					<span class="icon-user"></span>
