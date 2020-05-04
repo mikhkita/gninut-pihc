@@ -800,7 +800,7 @@
 		<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 		<div class="b-popup" id="b-main-popup">
 			<form class="b-form-request" action="kitsend.php" method="POST">
-				<input type="hidden" name="subject" value="Заявка на чип-тюнинг с попапа">
+				<input type="hidden" name="subject" value="Заявка на чип-тюнинг со всплывающего окна">
 				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер свяжется с Вами и рассчитает точный прирост мощности</p>
 				<div class="b-input-string">
 					<select id="mark-bottom" class="b-select-mark" name="mark-bottom" required="">
