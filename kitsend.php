@@ -1,15 +1,20 @@
 <?php
-	echo "1";
-	die();
 
 	require_once("phpmail.php");
 	$email_admin = "beatbox787@gmail.com";
 	// $email_admin = "soc.taxi.35@gmail.com";
 
-	$from = "“Социальное такси”";
-	$email_from = "robot@taxi-chita.ru";
+	$from = "“Автобезопасность”";
+	$email_from = "robot@autosafe.ru";
 
-	$deafult = array("name"=>"Имя","phone"=>"Телефон", "email"=>"E-mail");
+	$deafult = array(
+		"mark-bottom" => 'Марка',
+		"model-bottom" => 'Модель',
+		"engine-bottom" => 'Двигатель',
+		"name"=>"Имя",
+		"phone"=>"Телефон", 
+		"email"=>"E-mail"
+	);
 
 	$fields = array();
 
@@ -21,28 +26,40 @@
 			}
 		}
 
-		$i = 1;
-		while( isset($_POST[''.$i]) ){
-			$fields[$_POST[$i."-name"]] = $_POST[''.$i];
-			$i++;
-		}
-
 		$subject = $_POST["subject"];
 
 		$title = "Поступила заявка с сайта ".$from.":\n";
 
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
+		$msgTelegram = "Новая заявка на сайте “Автобезопасность”\n";
 
 		foreach ($fields  as $key => $value){
 			$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
+			$msgTelegram .="<b>".$key.":</b> ".$value."\n";
 		}
 			
 		$message .= "</div>";
 		
 		if(send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true)){	
+			sendMessage($msgTelegram);
 			echo "1";
 		}else{
 			echo "0";
 		}
+	}
+
+	function sendMessage($messaggio) {
+		$chatID = "-1001442196705";
+	    $token = "bot1202309466:AAFxFQ4eVuNLUHVL4jjLtpNC0DLSeQA255s";
+	    $url = "https://api.telegram.org/" . $token . "/sendMessage?chat_id=" . $chatID;
+	    $url = $url . "&parse_mode=HTML&text=" . urlencode($messaggio);
+	    $ch = curl_init();
+	    $optArray = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true
+	    );
+	    curl_setopt_array($ch, $optArray);
+	    $result = curl_exec($ch);
+	    curl_close($ch);
 	}
 ?>
