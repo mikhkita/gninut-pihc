@@ -675,6 +675,7 @@
 			</div>
 			<div class="b-7-right">
 				<form class="b-form-request" action="kitsend.php" method="POST">
+					<input type="hidden" name="subject" value="Заявка на чип-тюнинг">
 					<p><b>Оставьте ваши контактные данные</b> и наш менеджер свяжется с Вами в ближайшее время</p>
 					<div class="b-input-string">
 						<select id="mark-bottom" class="b-select-mark" name="mark-bottom" required="">
@@ -799,6 +800,7 @@
 		<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 		<div class="b-popup" id="b-main-popup">
 			<form class="b-form-request" action="kitsend.php" method="POST">
+				<input type="hidden" name="subject" value="Заявка на чип-тюнинг с попапа">
 				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер свяжется с Вами и рассчитает точный прирост мощности</p>
 				<div class="b-input-string">
 					<select id="mark-bottom" class="b-select-mark" name="mark-bottom" required="">
@@ -843,6 +845,7 @@
 		</div>
 		<div class="b-popup" id="b-phone-popup">
 			<form action="kitsend.php" method="POST">
+				<input type="hidden" name="subject" value="Заявка на обратный звонок">
 				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер перезвонит Вам в&nbsp;ближайшее время</p>
 				<div class="b-input-string b-input-user">
 					<input type="text" id="name" name="name" placeholder="Ваше имя" required="">

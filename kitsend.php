@@ -1,7 +1,7 @@
 <?php
 
 	require_once("phpmail.php");
-	$email_admin = "beatbox787@gmail.com";
+	$email_admin = "dimamulenok@yandex.ru";
 	// $email_admin = "soc.taxi.35@gmail.com";
 
 	$from = "“Автобезопасность”";
@@ -26,12 +26,12 @@
 			}
 		}
 
-		$subject = $_POST["subject"];
+		$subject = $_POST["subject"]."\n";
 
-		$title = "Поступила заявка с сайта ".$from.":\n";
+		$title = $subject;
 
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
-		$msgTelegram = "Новая заявка на сайте “Автобезопасность”\n";
+		$msgTelegram = $subject;
 
 		foreach ($fields  as $key => $value){
 			$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
