@@ -273,7 +273,7 @@ $(document).ready(function(){
         var marker = new google.maps.Marker({
             position: latlng,
             icon: {
-                url: "/i/pin.svg", // url
+                url: "i/pin.svg", // url
                 scaledSize: new google.maps.Size(50, 67), // scaled size
                 origin: new google.maps.Point(0,0), // origin
                 anchor: new google.maps.Point(19,58) // anchor

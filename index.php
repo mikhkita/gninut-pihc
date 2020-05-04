@@ -1,17 +1,19 @@
 <?
+	$version = "5";
+
 	$cars = file_get_contents('storage/cars.json');
 	$carImages = array(
-		"Acura" => array("i/Acura_rdx.png"),
-	    "Acura|RDX" => array("i/Acura_rdx.png"),
+		"Acura" => array("i/acura_rdx.png"),
+	    "Acura|RDX" => array("i/acura_rdx.png"),
 
 	    "Alfa Romeo" => array("i/alfa_romeo_spider_8c.png"),
 	    "Alfa Romeo|Spider" => array("i/alfa_romeo_spider_8c.png"),
 
-	    "Audi" => array("i/Audi_A4.png"),
-	    "Audi|A4" => array("i/Audi_A4.png"),
-	    "Audi|A 4" => array("i/Audi_A4.png"),
-	    "Audi|A6" => array("i/Audi_a6.png"),
-	    "Audi|A 6" => array("i/Audi_a6.png"),
+	    "Audi" => array("i/audi_a4.png"),
+	    "Audi|A4" => array("i/audi_a4.png"),
+	    "Audi|A 4" => array("i/audi_a4.png"),
+	    "Audi|A6" => array("i/audi_a6.png"),
+	    "Audi|A 6" => array("i/audi_a6.png"),
 
 	    "Bentley" => array("i/bentley_continental_gt.png"),
 	    "Bentley|Continental" => array("i/bentley_continental_gt.png"),
@@ -57,9 +59,9 @@
 	    "Ford|Kuga" => array("i/ford_kuga.png", "i/ford_kuga_1.png"),
 	    "Ford|Mondeo" => array("i/ford_mondeo.png"),
 
-	    "Ferrari" => array("i/Ferrari_430.png"),
-	    "Ferrari|F430" => array("i/Ferrari_430.png"),
-	    "Ferrari|430" => array("i/Ferrari_430.png"),
+	    "Ferrari" => array("i/ferrari_430.png"),
+	    "Ferrari|F430" => array("i/ferrari_430.png"),
+	    "Ferrari|430" => array("i/ferrari_430.png"),
 
 	    "Geely" => array("i/geely.png"),
 
@@ -67,9 +69,10 @@
 	    "GMC|Yukon" => array("i/gmc_yukon.png", "i/gmc_yukon_1.png"),
 
 	    "Great" => array("i/great_wall.png"),
+	    "Great Wall" => array("i/great_wall.png"),
 
-	    "Honda" => array("i/Civic_FD.png"),
-	    "Honda|Civic" => array("i/Civic_FD.png"),
+	    "Honda" => array("i/civic_fd.png"),
+	    "Honda|Civic" => array("i/civic_fd.png"),
 	    "Honda|Accord" => array("i/honda_accord.png"),
 	    "Honda|CR-V" => array("i/honda_crv.png"),
 	    "Honda|CRV" => array("i/honda_crv.png"),
@@ -122,9 +125,9 @@
 	    "Lotus" => array("i/lotus_elise.png"),
 	    "Lotus|Elise" => array("i/lotus_elise.png"),
 
-	    "Mazda" => array("i/Mazda3.png"),
-	    "Mazda|3" => array("i/Mazda3.png"),
-	    "Mazda|6" => array("i/Mazda_6.png"),
+	    "Mazda" => array("i/mazda3.png"),
+	    "Mazda|3" => array("i/mazda3.png"),
+	    "Mazda|6" => array("i/mazda_6.png"),
 
 	    "Mercedes" => array("i/mercedes_e_class.png"),
 	    "Mercedes|E-class" => array("i/mercedes_e_class.png"),
@@ -200,8 +203,8 @@
 	    "Suzuki" => array("i/suzuki_grand_vitara.png"),
 	    "Suzuki|Grand Vitara" => array("i/suzuki_grand_vitara.png"),
 
-	    "Toyota" => array("i/Camry_XV40.png"),
-	    "Toyota|Camry" => array("i/Camry_XV40.png"),
+	    "Toyota" => array("i/camry_xv40.png"),
+	    "Toyota|Camry" => array("i/camry_xv40.png"),
 	    "Toyota|Corolla" => array("i/toyota_corolla.png"),
 	    "Toyota|Land Cruiser" => array("i/toyota_land_druiser_200.png"),
 	    "Toyota|LandCruiser" => array("i/toyota_land_druiser_200.png"),
@@ -231,10 +234,10 @@
 	if(isset($_GET["keywords"]) && !empty($_GET["keywords"])){
 		$arCars = json_decode($cars, true);
 		foreach ($arCars as $_mark => $_models) {
-			if(preg_match("/".$_mark."/iu", $_GET["keywords"])){
+			if(preg_match("@".$_mark."@iu", $_GET["keywords"])){
 				$mark = $_mark;
 				foreach ($_models as $_model => $value) {
-					if(preg_match("/".$_model."/iu", $_GET["keywords"])){
+					if(preg_match("@".$_model."@iu", $_GET["keywords"])){
 						$model = $_model;
 					}
 				}
@@ -243,9 +246,17 @@
 		}
 	}
 
+	function array_change_key_case_unicode($arr, $c = CASE_LOWER) {
+	    $c = ($c == CASE_LOWER) ? MB_CASE_LOWER : MB_CASE_UPPER;
+	    foreach ($arr as $k => $v) {
+	        $ret[mb_convert_case($k, $c, "UTF-8")] = $v;
+	    }
+	    return $ret;
+	}
+
 	function findCarImage($mark, $model = false){
 		global $carImages;
-		$carImagesLower = array_change_key_case($carImages);
+		$carImagesLower = array_change_key_case_unicode($carImages);
 		$img = array(0 => "i/cadillac_escalade.png");
 		if($mark && $model){
 			$res = $carImagesLower[mb_strtolower($mark."|".$model)];
@@ -316,8 +327,8 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
-	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
-	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="css/KitAnimate.css?<?=$version?>" type="text/css">
+	<link rel="stylesheet" href="css/layout.css?<?=$version?>" type="text/css">
 
 	<!-- <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css"> -->
 	<!-- <link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css"> -->
@@ -500,7 +511,7 @@
 								<div class="b-tab-slider-left">
 									<div class="b-tab-slider-left-top">
 										<div class="b-tab-slider-left-top-num" style="background-image: url('i/3.svg');"></div>
-										<div class="b-tab-slider-left-top-text">Экология  и евро-нормы</div>
+										<div class="b-tab-slider-left-top-text">Экология и евро-нормы</div>
 									</div>
 									<div class="b-tab-slider-left-text">Строгие экологические нормы по выхлопу отработанных газов, действующие в большинстве развитых стран, также заставляют производителей прибегать к подобным ухищрениям.</div>
 								</div>
@@ -832,7 +843,7 @@
 		</div>
 		<div class="b-popup" id="b-phone-popup">
 			<form action="kitsend.php" method="POST">
-				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер перезвонит Вам  в&nbsp;ближайшее время</p>
+				<p><b>Оставьте ваши контактные данные,</b> наш&nbsp;менеджер перезвонит Вам в&nbsp;ближайшее время</p>
 				<div class="b-input-string b-input-user">
 					<input type="text" id="name" name="name" placeholder="Ваше имя" required="">
 					<span class="icon-user"></span>
@@ -886,7 +897,7 @@
 	<script src="js/KitAnimate.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/mask.js"></script>
-	<script src="js/KitSend.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/KitSend.js?<?=$version?>"></script>
+	<script src="js/main.js?<?=$version?>"></script>
 </body>
 </html>
