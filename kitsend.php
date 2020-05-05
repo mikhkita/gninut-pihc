@@ -4,6 +4,11 @@
 	$email_admin = "dimamulenok@yandex.ru";
 	// $email_admin = "soc.taxi.35@gmail.com";
 
+	if (!empty($_POST['MAIL'])) {
+		echo "1";
+		die();
+	}
+
 	$from = "“Автобезопасность”";
 	$email_from = "robot@autosafe.ru";
 

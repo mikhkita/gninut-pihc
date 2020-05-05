@@ -156,6 +156,9 @@ input.error,textarea.error{
 	/*border: 1px solid #CF6565 !important;*/
 	/*box-shadow: 0 -3px 0 0 #CF6565 !important;*/
 }
+input[name=MAIL]{
+	display: none;
+}
 .fancybox-inner{
 	overflow: visible !important;
 }
