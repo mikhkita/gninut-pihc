@@ -696,7 +696,7 @@
 						<label for="engine-bottom">Пожалуйста, укажите двигатель</label>
 					</div>
 					<div class="b-input-string b-input-phone">
-						<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
+						<input type="tel" id="phone" name="phone" placeholder="Ваш телефон">
 						<span class="icon-phone"></span>
 						<label for="phone">Пожалуйста, укажите ваш телефон</label>
 					</div>
@@ -821,7 +821,7 @@
 					<label for="engine-bottom">Пожалуйста, укажите двигатель</label>
 				</div>
 				<div class="b-input-string b-input-phone">
-					<input type="text" id="phone" name="phone" placeholder="Ваш телефон">
+					<input type="tel" id="phone" name="phone" placeholder="Ваш телефон">
 					<span class="icon-phone"></span>
 					<label for="phone">Пожалуйста, укажите ваш телефон</label>
 				</div>
@@ -853,7 +853,7 @@
 					<label for="name">Пожалуйста, укажите ваш телефон</label>
 				</div>
 				<div class="b-input-string b-input-phone">
-					<input type="text" id="phone" name="phone" placeholder="Ваш телефон" required="">
+					<input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required="">
 					<span class="icon-phone"></span>
 					<label for="phone">Пожалуйста, укажите ваш телефон</label>
 				</div>

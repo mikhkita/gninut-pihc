@@ -287,6 +287,14 @@ input:-moz-placeholder {
 	}
 }
 
+@media screen  and (max-width: 500px){
+	.fancybox-slide--html .fancybox-close-small{
+		padding: 5px;
+	    right: 0;
+	    top: 0;
+	}
+}
+
 /*************   checkbox   *************/
 
 .b-checkbox input[type="checkbox"].error + span + label:before,
@@ -1872,7 +1880,8 @@ input:-moz-placeholder {
 			.b-input-phone input.error + span + span.icon-phone:before{
 				color: #CD9292;
 			}
-			.b-input-string input[type=text]{
+			.b-input-string input[type=text],
+			.b-input-string input[type=tel]{
 				background: #F4F4F4;
 				box-shadow: 0 -3px 0 0 #E8EBEE;
 				border-radius: 5px;
